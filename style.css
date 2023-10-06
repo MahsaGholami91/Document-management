@@ -24,6 +24,113 @@
     font-size: 14px;
 }
 
+.main-login {
+    min-height: 100vh;
+    height: 100vh;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.left-login {
+    background: url(image/background.png) no-repeat center;
+    background-size: cover;
+    height: 100%;
+    box-shadow: 0 0 0 1px rgba(136,152,170,.1), 0 15px 35px 0 rgba(49,49,93,.1), 0 5px 15px 0 rgba(0,0,0,.13);
+    flex: 1;
+}
+.right-login {
+    height: 100%;
+    flex: 1;
+    background-color: #ffffff;
+    display: grid;
+    justify-items: center;
+    gap: 62px;
+    align-content: center;
+    align-items: end;
+    position: relative;
+}
+.login-form .form-control {
+    border-radius: 4px;
+    box-shadow: 0 0 0 1px rgba(49,49,93,.03), 0 2px 5px 0 rgba(49,49,93,.1), 0 1px 2px 0 rgba(0,0,0,.08);
+}
+.login-form {
+    max-width: 50%;
+    text-align: center;
+}
+
+.login-form .remember-checkbax {
+    vertical-align: middle;
+}
+
+.sign-forget {
+    display: flex;
+    justify-content: space-between;
+}
+.sign-forget p {
+    margin-bottom: 0;
+    padding-top: 5px;
+}
+
+.sign-forget a {
+    color: #666;
+}
+
+.sign-forget button {
+    background: #2aabd2;
+    border-color: transparent;
+    cursor: pointer;
+    font-weight: 500;
+    border-radius: 4px;
+    box-shadow: 0 0 0 1px rgba(50,50,93,.1), 0 2px 5px 0 rgba(50,50,93,.08), 0 1px 1.5px 0 rgba(0,0,0,.07), 0 1px 2px 0 rgba(0,0,0,.08), 0 0 0 0 transparent;
+    color: #fff;
+    padding: 6px 12px;
+    margin-bottom: 0;
+}
+
+.img-logo {
+    max-width: 100%;
+}
+.remember-check {
+    text-align: right;
+}
+
+.guess-btn-form {
+    cursor: pointer;
+    border: 1px solid #000;
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+    font-weight: 500;
+    border-radius: 4px;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    box-shadow: 0 0 0 1px rgb(50 50 93 / 30%);
+    transition: 0.3s;
+}
+
+.guess-btn-form:hover {
+    background-color: #ddd;
+}
+
+@media (max-width: 991px) {
+    .login-form {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .left-login {
+        display: none;
+    }
+}
+
 
 .login-container {
     display: flex;
@@ -1502,10 +1609,6 @@ label {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-}
-
-img {
-    width: 100%;
 }
 
 .grid-blok-img {
