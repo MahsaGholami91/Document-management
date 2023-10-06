@@ -19,12 +19,14 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
     <title>Document</title>
+
 </head>
 
 <body>
-    <div class="login-container">
-        <div class="row">
-            <div class=" left-part">
+
+    <div class="main-login">
+        <div class="right-login">
+            <div class="login-form">
                 <img src="image/title.png" alt="لوگو" class="img-logo">   
                 <form action="" class="form-container">
                     <div class="user-text form-group">
@@ -39,31 +41,30 @@
                             مرا به خاطر بسپار! </label>
                     </div>
                     <div class="sign-forget">
-                        <button type="submit" class="btn btn-primary">
+                        <button type="submit">
                             <span class="fas fa-check"></span>
-                            وارد شوید</button>
-                        <p>فراموشی رمز؟</p>
+                            وارد شوید
+                            </button>
+                        <a href="/">فراموشی رمز؟</a>
                     </div>
-                    <button type="submit" class="btn guess-btn mt-4">
+                    <button type="submit" class="guess-btn-form mt-4">
                         <span class="fas fa-user"></span>
-                        به عنوان مهمان وارد شوید</button>
-                </form>      
+                        به عنوان مهمان وارد شوید
+                    </button>
+                </form>
             </div>
-            <div class=" right-part"></div>
-        </div>
-        <div class="row ">
-            <div class=" footer login-footer text-center text-muted small">
-                <p>کلیه حقوق این سایت توسط
-                    <a class="author" href="">لورم</a>
-                    <a class="author-doc" href="">ایپسوم</a>
-                    <span>ورژن۲.۲</span>
-                </p>
+             <div class="footer login-footer text-center text-muted small">
                 <select id="language-select" onchange="changeLanguage()">
                     <option value="fa">فارسی</option>
                     <option value="en">English</option>
                 </select>
+                <p>کلیه حقوق این سایت توسط
+                    <a class="author" href="">لورم ایپسوم</a>
+                    <span>ورژن۲.۲</span>
+                </p>
             </div> 
         </div>
+        <div class="left-login"></div>
     </div>
 </body>
 
