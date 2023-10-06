@@ -23,40 +23,46 @@
 
 <body>
     <div class="login-container">
-        <div class="left-part">
-            <img src="image/title.png" alt="لوگو" class="img-logo">   
-            <form action="" class="form-container">
-                <div class="user-text form-group">
-                    <input class="form-control" type="text" name="" id="" placeholder="نام کاربری">
-                </div>
-                <div class="password-text form-group">
-                    <input class="form-control" type="text" name="" id="" placeholder="رمز عبور">
-                </div>
-                <div class="remember-check">
-                    <input class="remember-checkbax"  type="checkbox" name="" id="">
-                    <label  for="">
-                        مرا به خاطر بسپار! </label>
-                </div>
-                <div class="sign-forget">
-                    <button type="submit" class="btn btn-primary">
-                        <span class="fas fa-check"></span>
-                        وارد شوید</button>
-                    <p>فراموشی رمز؟</p>
-                </div>
-                <button type="submit" class="btn guess-btn mt-4">
-                    <span class="fas fa-user"></span>
-                    به عنوان مهمان وارد شوید</button>
-            </form>   
-            <div class="footer-text">
-                <p>کلیه حقوق این سایت محفوظ میباشد</p>
+        <div class="row">
+            <div class=" left-part">
+                <img src="image/title.png" alt="لوگو" class="img-logo">   
+                <form action="" class="form-container">
+                    <div class="user-text form-group">
+                        <input class="form-control" type="text" name="" id="" placeholder="نام کاربری">
+                    </div>
+                    <div class="password-text form-group">
+                        <input class="form-control" type="text" name="" id="" placeholder="رمز عبور">
+                    </div>
+                    <div class="remember-check">
+                        <input class="remember-checkbax"  type="checkbox" name="" id="">
+                        <label  for="">
+                            مرا به خاطر بسپار! </label>
+                    </div>
+                    <div class="sign-forget">
+                        <button type="submit" class="btn btn-primary">
+                            <span class="fas fa-check"></span>
+                            وارد شوید</button>
+                        <p>فراموشی رمز؟</p>
+                    </div>
+                    <button type="submit" class="btn guess-btn mt-4">
+                        <span class="fas fa-user"></span>
+                        به عنوان مهمان وارد شوید</button>
+                </form>      
+            </div>
+            <div class=" right-part"></div>
+        </div>
+        <div class="row ">
+            <div class=" footer login-footer text-center text-muted small">
+                <p>کلیه حقوق این سایت توسط
+                    <a class="author" href="">لورم</a>
+                    <a class="author-doc" href="">ایپسوم</a>
+                    <span>ورژن۲.۲</span>
+                </p>
                 <select id="language-select" onchange="changeLanguage()">
                     <option value="fa">فارسی</option>
                     <option value="en">English</option>
                 </select>
-            </div>      
-        </div>
-        <div class="right-part">
-
+            </div> 
         </div>
     </div>
 </body>

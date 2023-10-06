@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -18,11 +20,15 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.min.map"></script>
+    
     <title>Document</title>
 </head>
 
 <body>
-    <nav class="navbar default-nav" >
+    <nav class="navbar default-nav">
         <div class="left-side">
             <ul class="left-ul nav-ul">
                 <li class="left-li">
@@ -34,7 +40,7 @@
                         اسناد</a>
                 </li>
                 <li class="left-li">
-                    <a href=""> 
+                    <a href="">
                         <span class="fas fa-tags"></span>
                         تگ ها</a>
                 </li>
@@ -48,16 +54,16 @@
         <div class="right-side">
             <ul class="right-ul nav-ul">
                 <li class="right-li">
-                    <a href=""> 
+                    <a href="">
                         <span class="fas fa-user"></span>
                         ادمین</a>
                 </li>
-                <li  class="right-li">
+                <li class="right-li">
                     <a href="">
                         <span class="fas fa-cog"></span>
                         تنظیمات</a>
                 </li>
-                <li  class="right-li">
+                <li class="right-li">
                     <a href="">
                         <span class="fas fa-power-off"></span>
                         خروج
@@ -67,99 +73,716 @@
                 </li>
             </ul>
         </div>
-        
-    </nav>
-    <div class="main-page">
-        <div class="sidebar">
-            <div class="side all-side">
-                <p class="input-group">
-                    <span class="input-group-btn">
-                        <span class="fas fa-search"></span>
-                    </span> 
-                    <input type="search" class="form-control ng-pristine ng-untouched ng-valid ng-empty" placeholder="جستجو در گروه ها" >
-                </p>
-                <table class="row table table-hover">
-                    <tbody>
-                        <tr class="pointer">
-                            <td class=" ng-binding">مدیران سیستم</td>
-                        </tr>
-                        <tr class="pointer">
-                            <td class=" ng-binding">برنامه نویسان</td>
-                        </tr>
-                        <tr class="pointer">
-                            <td class=" ng-binding">منابع انسانی</td>
-                        </tr>
-                        <tr class="pointer">
-                            <td class=" ng-binding">کنترل کیفبت</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="well-3d-background"><span class="fas fa-users"></span></div>
 
-            </div>
-            <div class="side all-side">
-                    <p class="input-group">
-                        <span class="input-group-btn">
-                            <span class="fas fa-search"></span>
-                        </span> 
-                        <input type="search" class="form-control ng-pristine ng-untouched ng-valid ng-empty" placeholder="جستجو در کاربران">
-                    </p>
-                    <table class="row table table-hover">
+    </nav>
+
+    <div class="main-container">
+        <div class="main-page ">
+            <div class="sidebar ">
+                <div class="side all-side">
+                    <div class="add-doc-btn">
+                        <div class="btn-group dropdown" id="document-add-btn">
+                            <a href="#/document/add" class="btn btn-primary btn-add-txt">
+                                <span class="fas fa-plus"></span> افزودن یک سند
+                            </a>
+                            <button type="button" class="btn btn-primary dropdown-toggle dropbtn"
+                                onclick="toggleDropdown()">
+                                <!-- <span class="caret"></span> -->
+                            </button>
+                            <ul class="dropdown-menu dropdown-content" id="myDropdown">
+                                <li>
+                                    <a href="" class="">Import from an email (EML format)</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class=" search-dropdown-anchor">
+                        <div class=" input-group" id="search-box">
+                            <input type="search" class="form-control" placeholder="جستجو">
+                            <ul class="dropdown-menu"></ul>
+                            <span class="input-group-btn btn search-btn" onclick="toggleSearch()">
+                                <div class="dropdown">
+                                    <span class="btn-open-search">
+                                        <span class="fas fa-search"></span>
+                                        <span class="caret"></span>
+                                    </span>
+                                    <div class="search-dropdown-menu dropdown-menu search-dropdown-content"
+                                        id="mySearchDropdown" style="top: 24px; display: none; left: 0px; right: auto;">
+                                        <form class="search-form" name="searchForm">
+                                            <div class="form-group">
+                                                <label class="control-label sr-only " for="inputSearchSimple">جستجو
+                                                    ساده</label>
+                                                <div class="">
+                                                    <input type="text" id="inputSearchSimple" class="form-control"
+                                                        placeholder="جستجو ساده">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label sr-only " for="inputSearchFulltext">جستجوی
+                                                    تمام متن</label>
+                                                <div class="">
+                                                    <input type="text" id="inputSearchFulltext" class="form-control"
+                                                        placeholder="جستجوی تمام متن">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label sr-only " for="inputSearchCreator">ایجاد
+                                                    کننده</label>
+                                                <div class="">
+                                                    <input type="text" id="inputSearchCreator" class="form-control"
+                                                        placeholder="ایجاد کننده">
+                                                    <ul class="dropdown-menu"></ul>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label sr-only "
+                                                    for="inputSearchLanguage">زبان</label>
+                                                <div class="">
+                                                    <select class="form-control" id="inputSearchLanguage">
+                                                        <option value="" class="" selected="selected">همه زبان ها
+                                                        </option>
+                                                        <option value="eng" class=" ">English</option>
+                                                        <option value="fra" class=" ">Français</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label sr-only " for="inputSearchAfterDate">بعد از
+                                                    این تاریخ ایجاد شد</label>
+                                                <div class="">
+                                                    <input type="text" id="inputSearchAfterDate"
+                                                        class="form-control -date"
+                                                        placeholder="بعد از این تاریخ ایجاد شد">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label sr-only " for="inputSearchBeforeDate">قبل از
+                                                    این تاریخ ایجاد شد</label>
+                                                <div class="">
+                                                    <input type="text" id="inputSearchBeforeDate"
+                                                        class="form-control -date"
+                                                        placeholder="قبل از این تاریخ ایجاد شد">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label sr-only "
+                                                    for="inputSearchAfterUpdateDate">بعد از این تاریخ به روز شد</label>
+                                                <div class="">
+                                                    <input type="text" id="inputSearchAfterUpdateDate"
+                                                        class="form-control -date"
+                                                        placeholder="بعد از این تاریخ به روز شد">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label sr-only "
+                                                    for="inputSearchBeforeUpdateDate">قبل از این تاریخ به روز شد</label>
+                                                <div class="">
+                                                    <input type="text" id="inputSearchBeforeUpdateDate"
+                                                        class="form-control-date"
+                                                        placeholder="قبل از این تاریخ به روز شد">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label sr-only " for="inputSearchTags">تک
+                                                    ها</label>
+                                                <div class="">
+                                                    <div tags="advsearch.tags" ref="inputSearchTags" class="">
+                                                        <ul class="list-inline"></ul>
+                                                        <input class="form-control" type="text" id="inputSearchTags"
+                                                            placeholder="تگ را وارد کنید">
+                                                        <ul class="dropdown-menu"></ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label class="">
+                                                    <input type="checkbox" class="">فقط اسناد مشترک
+                                                </label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label class="">
+                                                    <input type="checkbox" class=""> گردش کار به من اختصاص داده شده است
+                                                </label>
+                                            </div>
+                                            <div class="form-group text-center">
+                                                <button type="submit" class="btn btn-primary ">
+                                                    <span class="fas fa-search"></span> جستجو
+                                                </button>
+                                                <button class="btn ">پاک کردن</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="flex-doc-menu">
+                        <ol class="breadcrumb breadcrumb-navigation pull-left mt-10">
+                            <li>
+                                <a href="">
+                                    <span class="fas fa-home"></span>
+                                </a>
+                            </li>
+                        </ol>
+                        <div class="flex-set-menu">
+                            <div class="btn-group mt-10 mr-10 pull-right">
+
+                                <span class="btn btn-default btn-right-tab" id="gridTab">
+                                    <span class="fas fa-th"></span>
+                                </span>
+                                <span class="btn btn-default btn-left-tab active-tab" id="listTab">
+                                    <span class="fas fa-list"></span>
+                                </span>
+                            </div>
+                            <div class="btn-group mt-10 pull-right">
+                                <button class="btn btn-default btn-folder" id="folderTab">
+                                    <span class="far fa-folder-open"></span>
+                                </button>
+                                <button class="btn btn-primary btn-add-tag">
+                                    <span>
+                                        <i class="fas fa-tag"></i>
+                                        <i class="fas fa-plus"></i>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+
+                    <table class=" table table-hover table-navigation" id="contentFolder">
                         <tbody>
-                            <tr class="pointer ng-scope">
-                                <td class="col-xs-4 ng-binding">
-                                    <span class="fas fa-user"></span> مدیر سیستم
-                                    <span class="text-muted ng-binding ng-scope">وارد شدید!</span>
-                                   
+
+                            <tr class="">
+                                <td class="tree-structure">
+                                    <div class="tree-line"></div>
+                                </td>
+                                <td class="">
+                                    <span class="fas fa-tags" style="color: rgb(103, 58, 99);"></span> لورم
+                                    <span class="text-muted small "></span>
                                 </td>
                             </tr>
-                            <tr class="pointer ng-scope">
-                                <td class="col-xs-4 ng-binding">
-                                    <span class="fas fa-user"></span> لورم 
+                            <tr class="">
+                                <td class="tree-structure">
+                                    <div class="tree-line"></div>
+                                </td>
+                                <td class="">
+                                    <span class="fas fa-tags" style="color: rgb(30, 184, 184);"></span> لورم
+                                    <span class="text-muted small "></span>
                                 </td>
                             </tr>
-                            <tr class="pointer ng-scope">
-                                <td class="col-xs-4 ng-binding">
-                                    <span class="fas fa-user"></span> لورم 
+                            <tr class="">
+                                <td class="tree-structure">
+                                    <div class="tree-line"></div>
+                                </td>
+                                <td class="">
+                                    <span class="fas fa-tags" style="color: rgb(139, 104, 117);"></span> لورم
+                                    <span class="text-muted small "></span>
                                 </td>
                             </tr>
-                            <tr class="pointer ng-scope">
-                                <td class="col-xs-4 ng-binding">
-                                    <span class="fas fa-user"></span> لورم 
+                            <tr class="">
+                                <td class="tree-structure">
+                                    <div class="tree-line"></div>
                                 </td>
-                            </tr>
-                            <tr class="pointer ng-scope">
-                                <td class="col-xs-4 ng-binding">
-                                    <span class="fas fa-user"></span> لورم 
-                                </td>
-                            </tr>
-                            <tr class="pointer ng-scope">
-                                <td class="col-xs-4 ng-binding">
-                                    <span class="fas fa-user"></span> لورم 
+                                <td class="">
+                                    <span class="fas fa-tags" style="color: rgb(221, 45, 155);"></span> لورم
+                                    <span class="text-muted small "></span>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
-                    <div class="well-3d-background">
-                        <span class="fas fa-user"></span>
+
+                    <div class="list-box content-list" id="contentList"">
+                        <div class="list-header">
+                            <div class="list-head">
+                                <span>عنوان</span>
+                                <span class="fas fa-chevron-up"></span>
+                            </div>
+                            <div class="list-head">
+                                <span>زمان تولید</span>
+                                <span class="fas fa-chevron-up"></span>
+                            </div>
+                        </div>
+                        <div class="list-body">
+                            <div class="list-content1">
+                               لورم (0)
+                                    <a href="#" >
+                                        <span class="fas fa-link"></span>
+                                    </a>
+                                    <div class="list-tag">
+                                        <span class="label label-info" style="color:white; background: red">تست</span>
+                                    </div>
+                            </div>
+                            <div class="list-content2">
+                                <div class="list-date" >6 دقیقه قبل</div>
+                            </div>
+                        </div>
+                        <div class="list-body">
+                            <div class="list-content1">
+                               لورم (0)
+                                    <a href="#" >
+                                        <span class="fas fa-link"></span>
+                                    </a>
+                                    <div class="list-tag">
+                                        <span class="label label-info" style="color:white; background: red">تست</span>
+                                    </div>
+                            </div>
+                            <div class="list-content2">
+                                <div class="list-date" >6 دقیقه قبل</div>
+                            </div>
+                        </div>
+                        <div class="list-body">
+                            <div class="list-content1">
+                               لورم (0)
+                                    <a href="#" >
+                                        <span class="fas fa-link"></span>
+                                    </a>
+                                    <div class="list-tag">
+                                        <span class="label label-info" style="color:white; background: red">تست</span>
+                                    </div>
+                            </div>
+                            <div class="list-content2">
+                                <div class="list-date" >6 دقیقه قبل</div>
+                            </div>
+                        </div>
+                        <div class="list-body">
+                            <div class="list-content1">
+                               لورم (0)
+                                    <a href="#" >
+                                        <span class="fas fa-link"></span>
+                                    </a>
+                                    <div class="list-tag">
+                                        <span class="label label-info" style="color:white; background: red">تست</span>
+                                    </div>
+                            </div>
+                            <div class="list-content2">
+                                <div class="list-date" >6 دقیقه قبل</div>
+                            </div>
+                        </div>
+                        <div class="list-body">
+                            <div class="list-content1">
+                               لورم (0)
+                                    <a href="#" >
+                                        <span class="fas fa-link"></span>
+                                    </a>
+                                    <div class="list-tag">
+                                        <span class="label label-info" style="color:white; background: red">تست</span>
+                                    </div>
+                            </div>
+                            <div class="list-content2">
+                                <div class="list-date" >6 دقیقه قبل</div>
+                            </div>
+                        </div>
                     </div>
+                    
+                    <div class="grid-box content-grid" id="contentGrid"">
+                        <div class="grid-blog">
+                            <div class="grid-blok-img">
+                                <a href="">
+                                    <img src="image/voice3_13-634x433.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="grid-blok-text">
+                                <span>lorem (0)</span>
+                            </div>
+                        </div>
+                        <div class="grid-blog">
+                            <div class="grid-blok-img">
+                                <a href="">
+                                    <img src="image/voice3_13-634x433.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="grid-blok-text">
+                                <span>lorem (0)</span>
+                            </div>
+                        </div>
+                        <div class="grid-blog">
+                            <div class="grid-blok-img">
+                                <a href="">
+                                    <img src="image/voice3_13-634x433.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="grid-blok-text">
+                                <span>lorem (0)</span>
+                            </div>
+                        </div>
+                        <div class="grid-blog">
+                            <div class="grid-blok-img">
+                                <a href="">
+                                    <img src="image/voice3_13-634x433.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="grid-blok-text">
+                                <span>lorem (0)</span>
+                            </div>
+                        </div>
+                        <div class="grid-blog">
+                            <div class="grid-blok-img">
+                                <a href="">
+                                    <img src="image/voice3_13-634x433.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="grid-blok-text">
+                                <span>lorem (0)</span>
+                            </div>
+                        </div>
+                        <div class="grid-blog">
+                            <div class="grid-blok-img">
+                                <a href="">
+                                    <img src="image/voice3_13-634x433.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="grid-blok-text">
+                                <span>lorem (0)</span>
+                            </div>
+                        </div>
+                        <div class="grid-blog">
+                            <div class="grid-blok-img">
+                                <a href="">
+                                    <img src="image/voice3_13-634x433.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="grid-blok-text">
+                                <span>lorem (0)</span>
+                            </div>
+                        </div>
+                        <div class="grid-blog">
+                            <div class="grid-blok-img">
+                                <a href="">
+                                    <img src="image/voice3_13-634x433.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="grid-blok-text">
+                                <span>lorem (0)</span>
+                            </div>
+                        </div>
+                        <div class="grid-blog">
+                            <div class="grid-blok-img">
+                                <a href="">
+                                    <img src="image/voice3_13-634x433.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="grid-blok-text">
+                                <span>lorem (0)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pagination-box">
+                        <ul class="pagination">
+                            <li  class="disabled"><a href="" >
+                                قبلی
+                            </a>
+                            </li>
+                            <li><a href="">1</a></li>
+                            <li><a href="">2</a></li>
+                            <li><a href="">3</a></li>
+                            <li><a href="">4</a></li>
+                            <li><a href="">5</a></li>
+                            <li><a href="">6</a></li>
+                            <li>
+                                <a href="">بعدی</a>
+                            </li>
+                            
+                        </ul>
+                        <select id="pagesizeSelect" class="form-control">
+                            <option value="10" class="" selected="selected">۱۰ در هر صفحه</option>
+                            <option value="20" class="">۲۰ در هر صفحه</option>
+                            <option value="30" class="">۳۰ در هر صفحه</option>
+                        </select>
+                    </div>
+
+                    <div class="pull-left small text-muted " title="To upgrade your quota, ask your administrator">۲۹ مگابایت
+                        (0.3%) استفاده شده از 10,000 مگابایت </div>
+                    <div class="text-right small text-muted">
+                        <span ng-if="totalDocuments" class="">53 سند پیدا شده</span>
+                    </div>
+                    <div class="sidebar-background">
+                        <span class="fas fa-book"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="main-page-right ">
+                <div class="part-one">
+                    <div class="part-one-header">
+                        <h3>آپلود سریع</h3>
+                        <button>انتخاب همه
+                            <span class="far fa-check-square"></span>
+                            <span class="far fa-square"></span>
+                        </button>
+                    </div>
+                    <div class="upload-box">
+                        <div class="upload-item-box">
+                            <div class="upload-item">
+                                <a href="">
+                                    <img src="" alt="">
+                                </a>
+                                <div class="upload-box-set">
+                                    <div>
+                                        <button class="btn btn-danger">
+                                            <span class="fas fa-trash"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="part-two">
+                    <h3>
+                        <span class="fas fa-exclamation-triangle text-danger"></span>
+                        اسنادی که به شما اختصاص داده شده است
+                    </h3>
+                    <div class="list-header">
+                        <div class="list-head">
+                            <span>عنوان</span>
+                        </div>
+                        <div class="list-head">
+                            <span>مرحله فعلی</span>
+                        </div>
+                        <div class="list-head">
+                            <span>زمان تولید</span>
+                        </div>
+                    </div>
+                    <div class="list-body">
+                        <div class="list-content1">
+                           لورم (0)
+                                <a href="#" >
+                                </a>
+                                <div class="list-tag">
+                                    <span class="label label-info" style="color:white; background: red">تست</span>
+                                </div>
+                        </div>
+                        <div class="list-content2">
+                            <div class="list-date" > دقیقه قبل</div>
+                        </div>
+                        <div class="list-content2">
+                            <div class="list-date" >6 دقیقه قبل</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="part-three">
+                    <h3> آخرین فعالیت ها</h3>
+                    <div class="lastActivity-details">
+                        <div class="dateTime">
+                            <span>3 ساعت پیش</span>
+                        </div>
+                        <div class="creator">
+                            <a href="" class=" creator-btn">
+                                <span class="fas fa-user"></span>
+                                ادمین
+                            </a>
+                        </div>
+                        <div class="actions">
+                            <span>ساخت گروه: </span>
+                            <span>گروه یک</span>
+                        </div>
+                    </div>
+                    <div class="lastActivity-details">
+                        <div class="dateTime">
+                            <span>3 ساعت پیش</span>
+                        </div>
+                        <div class="creator">
+                            <a href="" class=" creator-btn">
+                                <span class="fas fa-user"></span>
+                                ادمین
+                            </a>
+                        </div>
+                        <div class="actions">
+                            <span>ساخت گروه: </span>
+                            <span>گروه یک</span>
+                        </div>
+                    </div>
+                    <div class="lastActivity-details">
+                        <div class="dateTime">
+                            <span>3 ساعت پیش</span>
+                        </div>
+                        <div class="creator">
+                            <a href="" class=" creator-btn">
+                                <span class="fas fa-user"></span>
+                                ادمین
+                            </a>
+                        </div>
+                        <div class="actions">
+                            <span>ساخت گروه: </span>
+                            <span>گروه یک</span>
+                        </div>
+                    </div>
+                    <div class="lastActivity-details">
+                        <div class="dateTime">
+                            <span>3 ساعت پیش</span>
+                        </div>
+                        <div class="creator">
+                            <a href="" class=" creator-btn">
+                                <span class="fas fa-user"></span>
+                                ادمین
+                            </a>
+                        </div>
+                        <div class="actions">
+                            <span>ساخت گروه: </span>
+                            <span>گروه یک</span>
+                        </div>
+                    </div>
+                    <div class="lastActivity-details">
+                        <div class="dateTime">
+                            <span>3 ساعت پیش</span>
+                        </div>
+                        <div class="creator">
+                            <a href="" class=" creator-btn">
+                                <span class="fas fa-user"></span>
+                                ادمین
+                            </a>
+                        </div>
+                        <div class="actions">
+                            <span>ساخت گروه: </span>
+                            <span>گروه یک</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="main-page-right">
-            <h1>گروه ها و کاربران</h1>
-            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه</p>
+
+
+
+
+        <div class=" footer text-center text-muted small">
+            <p>کلیه حقوق این سایت توسط
+                <a href="">لورم</a>
+                <a href="">ایپسوم</a>
+                <span>ورژن۲.۲</span>
+            </p>
+            <select id="language-select" onchange="changeLanguage()">
+                <option value="fa">فارسی</option>
+                <option value="en">English</option>
+            </select>
         </div>
     </div>
-    <div class="col-md-12 footer text-center text-muted small">
-        <p>کلیه حقوق این سایت توسط
-            <a href="">لورم</a>
-            <a href="">ایپسوم</a>
-            <span>ورژن۲.۲</span>
-        </p>
-        <select id="language-select" onchange="changeLanguage()">
-            <option value="fa">فارسی</option>
-            <option value="en">English</option>
-        </select>
-    </div>  
+
+
+
+
+
+
+    <script>
+        function toggleDropdown() {
+            var dropdown = document.getElementById("myDropdown");
+            if (dropdown.style.display === "block") {
+                dropdown.style.display = "none";
+            } else {
+                dropdown.style.display = "block";
+            }
+        }
+
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.style.display === "block") {
+                        openDropdown.style.display = "none";
+                    }
+                }
+            }
+        }
+
+
+        function toggleSearch() {
+            var dropdown = document.getElementById("mySearchDropdown");
+            if (dropdown.style.display === "block") {
+                dropdown.style.display = "none";
+            } else {
+                dropdown.style.display = "block";
+            }
+        }
+
+        window.onclick = function (event) {
+            if (!event.target.matches('.search-btn')) {
+                var dropdowns = document.getElementsByClassName("search-dropdown-content");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.style.display === "block") {
+                        openDropdown.style.display = "none";
+                    }
+                }
+            }
+        }
+
+
+    </script>
+    <script>
+       $(document).ready(function() {
+            $("#listTab").click(function() {
+                $("#contentList").show();
+                $("#contentGrid").hide();
+                $("#listTab").addClass("active-tab");
+                $("#gridTab").removeClass("active-tab");
+            });
+
+            $("#gridTab").click(function() {
+                $("#contentGrid").show();
+                $("#contentList").hide();
+                $("#listTab").removeClass("active-tab");
+                $("#gridTab").addClass("active-tab");
+            });
+        });
+
+    
+        $(document).ready(function() {
+            $("#folderTab").click(function() {
+                $("#contentFolder").toggle(); 
+            });
+        });
+      
+     
+    </script>
+    
+    <!-- <script>
+        const content = $('.pagination-box ul');
+        const prevBtn = $('#prevBtn');
+        const nextBtn = $('#nextBtn');
+        
+        let currentPage = 1;
+        const itemsPerPage = 3; 
+        
+        function displayItems() {
+            const items = content.children();
+            const start = (currentPage - 1) * itemsPerPage;
+            const end = start + itemsPerPage;
+            
+            items.hide();
+            items.slice(start, end).show();
+        }
+        
+        prevBtn.click(function() {
+            if (currentPage > 1) {
+                currentPage--;
+                displayItems();
+                nextBtn.prop('disabled', false);
+            }
+            
+            if (currentPage === 1) {
+                prevBtn.prop('disabled', true);
+            }
+        });
+        
+        nextBtn.click(function() {
+            const items = content.children();
+            const totalItems = items.length;
+            const totalPages = Math.ceil(totalItems / itemsPerPage);
+            
+            if (currentPage < totalPages) {
+                currentPage++;
+                displayItems();
+                prevBtn.prop('disabled', false);
+            }
+            
+            if (currentPage === totalPages) {
+                nextBtn.prop('disabled', true);
+            }
+        });
+        
+        displayItems();
+    </script> -->
+
 </body>
+
 </html>

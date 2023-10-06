@@ -6,18 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap/js/bootstrap.js">
+    <link rel="stylesheet" href="css/bootstrap/js/bootstrap.min.js">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 
@@ -69,119 +62,357 @@
         </div>
         
     </nav>
-    <div class="main-page">
-        <div class="sidebar">
-            <div class="side all-side">
-                <p class="input-group">
-                    <span class="input-group-btn">
-                        <span class="fas fa-search"></span>
-                    </span> 
-                    <input type="search" class="form-control ng-pristine ng-untouched ng-valid ng-empty" placeholder="جستجو در گروه ها" >
-                </p>
-                <table class="row table table-hover">
-                    <tbody>
-                        <tr class="pointer">
-                            <td class=" ng-binding">مدیران سیستم</td>
-                        </tr>
-                        <tr class="pointer">
-                            <td class=" ng-binding">برنامه نویسان</td>
-                        </tr>
-                        <tr class="pointer">
-                            <td class=" ng-binding">منابع انسانی</td>
-                        </tr>
-                        <tr class="pointer">
-                            <td class=" ng-binding">کنترل کیفبت</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="well-3d-background"><span class="fas fa-users"></span></div>
-
-            </div>
-            <div class="side all-side">
-                    <p class="input-group">
-                        <span class="input-group-btn">
-                            <span class="fas fa-search"></span>
-                        </span> 
-                        <input type="search" class="form-control ng-pristine ng-untouched ng-valid ng-empty" placeholder="جستجو در کاربران">
-                    </p>
-                    <table class="row table table-hover">
-                        <tbody>
-                            <tr class="pointer ng-scope">
-                                <td class="col-xs-4 ng-binding">
-                                    <span class="fas fa-user"></span> مدیر سیستم
-                                    <span class="text-muted ng-binding ng-scope">وارد شدید!</span>
-                                   
-                                </td>
-                            </tr>
-                            <tr class="pointer ng-scope">
-                                <td class="col-xs-4 ng-binding">
-                                    <span class="fas fa-user"></span> لورم 
-                                </td>
-                            </tr>
-                            <tr class="pointer ng-scope">
-                                <td class="col-xs-4 ng-binding">
-                                    <span class="fas fa-user"></span> لورم 
-                                </td>
-                            </tr>
-                            <tr class="pointer ng-scope">
-                                <td class="col-xs-4 ng-binding">
-                                    <span class="fas fa-user"></span> لورم 
-                                </td>
-                            </tr>
-                            <tr class="pointer ng-scope">
-                                <td class="col-xs-4 ng-binding">
-                                    <span class="fas fa-user"></span> لورم 
-                                </td>
-                            </tr>
-                            <tr class="pointer ng-scope">
-                                <td class="col-xs-4 ng-binding">
-                                    <span class="fas fa-user"></span> لورم 
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <div class="well-3d-background">
-                        <span class="fas fa-user"></span>
-                    </div>
-            </div>
-        </div>
-        <div class="main-page-right">
-            <div class="page-header">
-                <h1>
-                    لورم
-                    <small>demo@gmail.com</small>
-                </h1> 
-            </div>
-
-            <h4>لورم ایپسوم</h4>
-            <div class="col-md-6">
-                <div class="progress" title="20% Used">
-                    <div class="progress-bar" style="width: 20.38556%;">
-                        <span class="sr-only ng-scope">20% Used</span>
+    <div class="main-container">
+        <div class="main-page ">
+            <div class="sidebar ">
+                <div class="side all-side">
+                    <form class="form-inline text-center" name="tagForm" >
+                        <div class="input-group" >
+                            <span class="input-group-btn btn btn-default    " data-color="#3a87ad"  style="background: rgb(58, 135, 173);">&nbsp;</span>
+                            <input type="text" name="color" class="form-control" > 
+                            <button class="btn btn-default" >
+                                <span class="fas fa-microchip"></span>
+                            </button>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="name" class="form-control "  placeholder="تگ جدید">
+                        </div>
+                        <span class="btn btn-primary">Add</span> 
+                        <!-- <span class="text-danger">لورم اجازه ادمین تنظیمات نام</span> -->
+                    </form>
+                    <ul class="tag-tree">
+                        <li  class="">
+                            <span  class="">
+                                <span class="fas fa-tag"  style="color: rgb(173, 58, 99);"></span>
+                                <a href="" class="">
+                                    لورم
+                                </a>
+                            </span>
+                            <ul class="list-unstyled "></ul>
+                        </li>              
+                        <li  class="">
+                            <span  class="">
+                                <span class="fas fa-tag"  style="color: rgb(58, 135, 173);"></span>
+                                <a href="" class="">
+                                لورم
+                                </a>
+                            </span>
+                            <ul class="list-unstyled ">
+                                <li class="">
+                                    <span class="">
+                                        <span class="fas fa-tag"  style="color: rgb(189, 26, 94);"></span>
+                                        <a href="" class="">
+                                        لورم
+                                        </a>
+                                    </span>
+                                    <ul class="list-unstyled "></ul>
+                                </li>
+                                <li   class="">
+                                    <span  class="">
+                                        <span class="fas fa-tag"  style="color: rgb(237, 172, 47);"></span>
+                                        <a href="" class="">
+                                        لورم
+                                        </a>
+                                    </span>
+                                    <ul class="list-unstyled "></ul>
+                                </li>
+                                <li   class="">
+                                    <span  class="">
+                                        <span class="fas fa-tag"  style="color: rgb(58, 135, 173);"></span>
+                                        <a href="" class="">
+                                        لورم
+                                        </a>
+                                    </span>
+                                    <ul class="list-unstyled "></ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li  class="">
+                            <span  class="">
+                                <span class="fas fa-tag"  style="color: rgb(208, 67, 106);"></span>
+                                <a href="" class="">
+                                لورم
+                                </a>
+                            </span>
+                            <ul class="list-unstyled ">
+                                <li   class="">
+                                    <span  class="">
+                                        <span class="fas fa-tag"  style="color: rgb(27, 35, 81);"></span>
+                                        <a href="" class="">
+                                            بانک
+                                        </a>
+                                    </span>
+                                    <ul class="list-unstyled ">
+                                        <li   class="">
+                                            <span  class=" active">
+                                                <span class="fas fa-tag"  style="color: rgb(58, 135, 173);"></span>
+                                                <a href="" class="">
+                                                شعبه
+                                                </a>
+                                            </span>
+                                            <ul class="list-unstyled "></ul>
+                                        </li>
+                                        
+                                    </ul>
+                                </li>
+                                <li   class="">
+                                    <span  class="">
+                                        <span class="fas fa-tag"  style="color: rgb(119, 149, 248);"></span>
+                                        <a href="" class="">
+                                        لورم
+                                        </a>
+                                    </span>
+                                    <ul class="list-unstyled "></ul>
+                                </li>
+                                <li   class="">
+                                    <span  class="">
+                                        <span class="fas fa-tag"  style="color: rgb(58, 135, 173);"></span>
+                                        <a href="" class="">
+                                            لورم
+                                        </a>
+                                    </span>
+                                    <ul class="list-unstyled "></ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li  class="">
+                            <span  class="">
+                                <span class="fas fa-tag"  style="color: rgb(221, 45, 155);"></span>
+                                <a href="" class="">
+                                    لورم
+                                </a>
+                            </span>
+                            <ul class="list-unstyled "></ul>
+                        </li>
+                        <li  class="">
+                            <span  class="">
+                                <span class="fas fa-tag"  style="color: rgb(129, 188, 65);"></span>
+                                <a href="" class="">
+                                    لورم
+                                </a>
+                            </span>
+                            <ul class="list-unstyled ">
+                                <li   class="">
+                                    <span  class="">
+                                        <span class="fas fa-tag"  style="color: rgb(118, 45, 191);"></span>
+                                        <a href="" class="">
+                                            لورم
+                                        </a>
+                                    </span>
+                                    <ul class="list-unstyled "></ul>
+                                </li>
+                                <li   class="">
+                                    <span  class="">
+                                        <span class="fas fa-tag"  style="color: rgb(237, 104, 47);"></span>
+                                        <a href="" class="">
+                                            لورم
+                                        </a>
+                                    </span>
+                                    <ul class="list-unstyled "></ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li  class="">
+                            <span  class="">
+                                <span class="fas fa-tag"  style="color: rgb(227, 67, 45);"></span>
+                                <a href="" class="">
+                                    لورم
+                                </a>
+                            </span>
+                            <ul class="list-unstyled "></ul>
+                        </li>
+                        <li  class="">
+                            <span  class="">
+                                <span class="fas fa-tag"  style="color: rgb(82, 118, 136);"></span>
+                                <a href="" class="">
+                                لورم
+                                </a>
+                            </span>
+                            <ul class="list-unstyled "></ul>
+                        </li>
+                        <li  class="">
+                            <span  class="">
+                                <span class="fas fa-tag"  style="color: rgb(58, 135, 173);"></span>
+                                <a href="" class="">
+                                    لورم
+                                </a>
+                            </span>
+                            <ul class="list-unstyled "></ul>
+                        </li>
+                        <li  class="">
+                            <span  class="">
+                                <span class="fas fa-tag"  style="color: rgb(19, 51, 68);"></span>
+                                <a href="" class="">
+                                    لورم
+                                </a>
+                            </span>
+                            <ul class="list-unstyled "></ul>
+                        </li>
+                        <li  class="">
+                            <span  class="">
+                                <span class="fas fa-tag"  style="color: rgb(58, 135, 173);"></span>
+                                <a href="" class="">
+                                    لورم
+                                </a>
+                            </span>
+                            <ul class="list-unstyled "></ul>
+                        </li>
+                        <li  class="">
+                            <span  class="">
+                                <span class="fas fa-tag"  style="color: rgb(255, 92, 180);"></span>
+                                <a href="" class="">
+                                    لورم
+                                </a>
+                            </span>
+                            <ul class="list-unstyled "></ul>
+                        </li>
+                    </ul>
+                    <div class="sidebar-background">
+                        <span class="fas fa-tags"></span>
                     </div>
                 </div>
             </div>
-            <h4 class="">لورم ایپسوم</h4>
-            <ul class="">
-                <li>
-                    <a class="" href="#">لورم</a>
-                </li>
-                <li class="">
-                    <a class="" href="#">لورم</a>
-                </li>
-            </ul>
+            <div class="main-page-right ">
+                <div class="tags-head">
+                    <div class="tag-header">
+                        <div class="pull-right " >
+                            <button class="btn btn-danger " >
+                                <span class="fas fa-trash"></span> حذف
+                            </button>
+                        </div>
+                        <div class="page-header ">
+                            <h1 class="">شعبه&nbsp;</h1>
+                        </div>
+                    </div>
+                    <div class="side" >
+                        <form class="" name="editTagForm">
+                            <div class="form-group" >
+                                <label class="control-label" for="inputName">نام</label>
+                                <div class="inputName">
+                                    <input type="text" name="name" class="form-control " id="inputName" >
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label" for="inputColor">رنگ</label>
+                                <div class="inputColor">
+                                    <div class="input-group" id="inputColor" >
+                                        <span colorpicker="" class="input-group-btn btn btn-default" data-color="#3a87ad"   style="background: rgb(58, 135, 173);">&nbsp;</span> 
+                                        <button class="btn btn-default" >
+                                            <span class="fas fa-microchip"></span>
+                                        </button> 
+                                        <input type="text" name="color" class="form-control" >
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class=" control-label " for="inputParent">والد</label>
+                                <div class="inputParent">
+                                    <select class="form-control" id="inputParent">
+                                        <option value=""></option>
+                                        <option class="">لورم</option>
+                                        <option class="">لورم</option>
+                                        <option class="">لورم</option>
+                                        <option class="" selected="selected">بانک</option>
+                                        <option class="">لورم</option>
+                                        <option class="">لورم</option>
+                                        <option class="">لورم</option>
+                                        <option class="">لورم</option>
+                                        <option class="">لورم</option>
+                                        <option class="">لورم</option>
+                                        <option class="">لورم</option>                        
+                                        <option class="">لورم</option>
+                                        <option class="">لورم</option>
+                                        <option class="">لورم</option>
+                                        <option class="">لورم</option>
+                                        <option class="">لورم</option>
+                                        <option class="">لورم</option>
+                                        <option class="">لورم</option>
+                                        
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="save-btn">
+                                    <button type="submit" class="btn btn-primary ">
+                                        <span class="fas fa-pencil-alt"></span> ذخیره
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="side  ">
+                        <p class="">لورم ایپسوم ادمین اسناد انسانی
+                            <span class="label label-info" >شعبه</span>
+                        </p>
+                        <div class="">
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <th style="width: 40%" class="">برای</th>
+                                        <th style="width: 40%" class="">دسترسی</th>
+                                    </tr>
+                                    <tr  class="">
+                                        <td>
+                                            <span class=" ">
+                                                <em class="">کاربر</em> ادمین
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <span class="label label-default  " style="margin-right: 6px">میتواند بخواند 
+                                            </span>
+                                            <span class="label label-default  " style="margin-right: 6px">میتواند بنویسد 
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="">
+                                <h4 class="">اجازه دسترسی</h4>
+                                <form name="" class="">
+                                    <div class="form-group">
+                                        <label class=" control-label " for="inputTarget">برای</label>
+                                        <div class="inputTarget">
+                                            <input required=""  class="form-control" type="text" id="inputTarget">
+                                            <ul class="dropdown-menu " >
+                                            </ul>
+                                        </div>
+                                        <div class=""></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class=" control-label " for="inputPermission">دسترسی</label>
+                                        <div class="inputPermission">
+                                            <select class="form-control" id="inputPermission">
+                                                <option value="READ" class="" selected="selected">برای خواندن</option>
+                                                <option value="READWRITE" class="">Can write</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="plus-btn">
+                                            <button type="submit" class="btn btn-primary " disabled="disabled">
+                                                <span class="fas fa-plus"></span> اضافه
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+        <div class=" footer text-center text-muted small">
+            <p>کلیه حقوق این سایت توسط
+                <a href="">لورم</a>
+                <a href="">ایپسوم</a>
+                <span>ورژن۲.۲</span>
+            </p>
+            <select id="language-select" onchange="changeLanguage()">
+                <option value="fa">فارسی</option>
+                <option value="en">English</option>
+            </select>
+        </div>  
     </div>
-    <div class="col-md-12 footer text-center text-muted small">
-        <p>کلیه حقوق این سایت توسط
-            <a href="">لورم</a>
-            <a href="">ایپسوم</a>
-            <span>ورژن۲.۲</span>
-        </p>
-        <select id="language-select" onchange="changeLanguage()">
-            <option value="fa">فارسی</option>
-            <option value="en">English</option>
-        </select>
-    </div>  
+    
 </body>
 </html>
