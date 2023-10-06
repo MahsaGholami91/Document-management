@@ -1035,6 +1035,8 @@ label {
 .main-page-right .tags-head .side .form-group .plus-btn .btn-primary[disabled]:hover,
 .btn-primary {
     color: #fff;
+    background-color: #337ab7 !important;
+    border-color: #2e6da4 !important;
 }
 
 .main-page-right .tags-head .side .form-group .save-btn .btn-primary:hover {
