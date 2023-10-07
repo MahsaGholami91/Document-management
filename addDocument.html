@@ -498,11 +498,11 @@
         <div class="document-box">
             <form action="">
                 <div class="save-doc">
-                    <button type="submit" class="save-doc-btn" disabled="disabled">
+                    <button type="submit" class="save-doc-btn btn " disabled="disabled">
                         <span class="fas fa-save"></span> ذخیره
                     </button>
                 </div>
-                <div class="doc-blok">
+                <div class="first-doc-blok">
                     <h3>افزودن سند</h3>
                     <div class="doc-fields">
                         <div class="doc-title">
@@ -511,12 +511,12 @@
                         </div>
                         <div class="doc-description">
                             <label for="">توضیحات</label>
-                            <textarea  class="form-control" name="" id="" cols="30" rows="10"></textarea>
+                            <textarea class="form-control" name="" id="" cols="30" rows="10"></textarea>
                         </div>
                         <div class="doc-creation-date">
                             <label for="">تاریخ</label>
                             <input type="text" class="form-control" name="" id="">
-                            <span class="input-group-btn">
+                            <span class="">
                                 <button type="button" class="btn btn-default">
                                     <i class="fas fa-calendar"></i>
                                 </button>
@@ -540,6 +540,79 @@
                         </div>
                     </div>
 
+                </div>
+                <div class="second-doc-blok">
+                    <div class="additional">
+                        <h3>داده اضافی</h3>
+                        <span class="fas fa-plus plus-btn" id="extraToggle"></span>
+                    </div>
+                    <div class="doc-extra-fields display-none" id="extraDiv">
+                        <div class="doc-title">
+                            <label for="">موضوع</label>
+                            <input type="text" class="form-control" name="" id="" placeholder="موضوع منبع">
+                        </div>
+                        <div class="doc-title">
+                            <label for="">شناسه ها</label>
+                            <input type="text" class="form-control" name="" id=""
+                                placeholder="ارجاع بدون ابهام به منبع در یک زمینه معین">
+                        </div>
+                        <div class="doc-title">
+                            <label for="">ناشر</label>
+                            <input type="text" class="form-control" name="" id=""
+                                placeholder="نهادی که مسئول در دسترس قرار دادن منبع است">
+                        </div>
+                        <div class="doc-title">
+                            <label for="">قالب</label>
+                            <input type="text" class="form-control" name="" id=""
+                                placeholder="فرمت فایل، رسانه فیزیکی یا ابعاد منبع">
+                        </div>
+                        <div class="doc-title">
+                            <label for="">منبع</label>
+                            <input type="text" class="form-control" name="" id=""
+                                placeholder="یک منبع مرتبط که منبع توصیف شده از آن مشتق شده است">
+                        </div>
+
+                        <div class="doc-language">
+                            <label for="">مدل</label>
+                            <select class="form-control">
+                                <option value="" selected="selected"></option>
+                                <option value="en">انگلیسی</option>
+                                <option value="fa">فارسی</option>
+                                <option value="fr">فرانسه</option>
+                            </select>
+                        </div>
+                        <div class="doc-language">
+                            <label for="">پوشش</label>
+                            <select class="form-control">
+                                <option value="" selected="selected"></option>
+                                <option value="England">انگلیس</option>
+                                <option value="USA">آمریکا</option>
+                                <option value="france">فرانسه</option>
+                            </select>
+                        </div>
+                        <div class="doc-language">
+                            <label for="">حقوق</label>
+                            <select class="form-control">
+                                <option value="" selected="selected"></option>
+                                <option value="">لورم</option>
+                                <option value="">لورم</option>
+                                <option value="">لورم</option>
+                            </select>
+                        </div>
+                        <div class="doc-tags">
+                            <label for="">روابط</label>
+                            <input type="text" class="form-control" name="" id="" placeholder="عنوان سند را تایپ کنید">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="form-group">
+                    <div class="button-blok">
+                        <button type="submit" class="btn save-doc-btn" disabled="disabled">
+                            <span class="fas fa-save"></span> Save
+                        </button>
+                        <button type="submit" class="btn btn-default cancle-btn">Cancel</button>
+                    </div>
                 </div>
             </form>
         </div>
@@ -627,6 +700,17 @@
             });
 
 
+            const $toggleButton = $('#extraToggle');
+            const $items = $('#extraDiv');
+
+            $items.hide();
+
+            $toggleButton.click(function () {
+                $items.toggle(); 
+            });
+
+
+
             const $fileCheckbox = $('.file-checkbox');
             const $addNewFile = $('#add-newFile');
             const $newFile = $('#newFile');
@@ -641,6 +725,8 @@
                     $newFile.show();
                 }
             });
+
+
 
         });
 
