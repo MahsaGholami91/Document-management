@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap/js/bootstrap.js">
     <link rel="stylesheet" href="css/bootstrap/js/bootstrap.min.js">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
     <script src="js/jquery.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery.min.map"></script>
@@ -68,13 +68,13 @@
     </nav>
 
     <div class="main-container">
-        <div class="main-page ">
+        <div class="main-page mobile-column">
             <div class="sidebar ">
                 <div class="side all-side">
                     <div class="add-doc-btn">
                         <div class="btn-group dropdown" id="document-add-btn">
                             <a href="#/document/add" class="btn btn-primary btn-add-txt">
-                                <span class="fas fa-plus"></span> افزودن یک سند
+                                <span class="fas fa-plus"></span> افزودن سند
                             </a>
                             <button type="button" class="btn btn-primary dropdown-toggle dropbtn"
                                 onclick="toggleDropdown()">
@@ -88,9 +88,8 @@
                         </div>
                     </div>
                     <div class=" search-dropdown-anchor">
-                        <div class=" input-group" id="search-box">
+                        <div class="input-group nowrap" id="search-box">
                             <input type="search" class="search-input form-control" placeholder="جستجو">
-                            <ul class="dropdown-menu"></ul>
                             <span class="input-group-btn btn search-btn" onclick="toggleSearch()">
                                 <div class="dropdown">
                                     <span class="btn-open-search">
@@ -232,7 +231,7 @@
                                 <button class="btn btn-primary btn-add-tag">
                                     <span>
                                         <i class="fas fa-tag"></i>
-                                        <i class="fas fa-plus"></i>
+                                        <i class="fas fa-plus plus-icon"></i>
                                     </span>
                                 </button>
                             </div>
@@ -282,180 +281,182 @@
                         </tbody>
                     </table>
 
-                    <div class="list-box content-list" id="contentList"">
+                    <div class="list-box content-list" id="contentList">
                         <div class=" list-header">
-                        <div class="list-head">
-                            <span>عنوان</span>
-                            <span class="fas fa-chevron-up"></span>
-                        </div>
-                        <div class="list-head">
-                            <span>زمان تولید</span>
-                            <span class="fas fa-chevron-up"></span>
-                        </div>
-                    </div>
-                    <div class="list-body">
-                        <div class="list-content1">
-                            لورم (0)
-                            <a href="#">
-                                <span class="fas fa-link"></span>
-                            </a>
-                            <div class="list-tag">
-                                <span class="label label-info" style="color:white; background: red">تست</span>
+                            <div class="list-head">
+                                <span>عنوان</span>
+                                <span class="fas fa-chevron-up"></span>
+                            </div>
+                            <div class="list-head">
+                                <span>زمان تولید</span>
+                                <span class="fas fa-chevron-up"></span>
                             </div>
                         </div>
-                        <div class="list-content2">
-                            <div class="list-date">6 دقیقه قبل</div>
-                        </div>
-                    </div>
-                    <div class="list-body">
-                        <div class="list-content1">
-                            لورم (0)
-                            <a href="#">
-                                <span class="fas fa-link"></span>
-                            </a>
-                            <div class="list-tag">
-                                <span class="label label-info" style="color:white; background: red">تست</span>
+                        <div class="list-body">
+                            <div class="list-content1">
+                                لورم (0)
+                                <a href="#">
+                                    <span class="fas fa-link"></span>
+                                </a>
+                                <div class="list-tag">
+                                    <span class="label label-info" style="color:white; background: rgb(189, 26, 94)">تست</span>
+                                </div>
+                            </div>
+                            <div class="list-content2">
+                                <div class="list-date">6 دقیقه قبل</div>
                             </div>
                         </div>
-                        <div class="list-content2">
-                            <div class="list-date">6 دقیقه قبل</div>
-                        </div>
-                    </div>
-                    <div class="list-body">
-                        <div class="list-content1">
-                            لورم (0)
-                            <a href="#">
-                                <span class="fas fa-link"></span>
-                            </a>
-                            <div class="list-tag">
-                                <span class="label label-info" style="color:white; background: red">تست</span>
+                        <div class="list-body">
+                            <div class="list-content1">
+                                لورم (0)
+                                <a href="#">
+                                    <span class="fas fa-link"></span>
+                                </a>
+                                <div class="list-tag">
+                                    <span class="label label-info" style="color:white; background: rgb(189, 26, 94)">تست</span>
+                                </div>
+                            </div>
+                            <div class="list-content2">
+                                <div class="list-date">6 دقیقه قبل</div>
                             </div>
                         </div>
-                        <div class="list-content2">
-                            <div class="list-date">6 دقیقه قبل</div>
-                        </div>
-                    </div>
-                    <div class="list-body">
-                        <div class="list-content1">
-                            لورم (0)
-                            <a href="#">
-                                <span class="fas fa-link"></span>
-                            </a>
-                            <div class="list-tag">
-                                <span class="label label-info" style="color:white; background: red">تست</span>
+                        <div class="list-body">
+                            <div class="list-content1">
+                                لورم (0)
+                                <a href="#">
+                                    <span class="fas fa-link"></span>
+                                </a>
+                                <div class="list-tag">
+                                    <span class="label label-info" style="color:white; background: rgb(189, 26, 94)">تست</span>
+                                </div>
+                            </div>
+                            <div class="list-content2">
+                                <div class="list-date">6 دقیقه قبل</div>
                             </div>
                         </div>
-                        <div class="list-content2">
-                            <div class="list-date">6 دقیقه قبل</div>
-                        </div>
-                    </div>
-                    <div class="list-body">
-                        <div class="list-content1">
-                            لورم (0)
-                            <a href="#">
-                                <span class="fas fa-link"></span>
-                            </a>
-                            <div class="list-tag">
-                                <span class="label label-info" style="color:white; background: red">تست</span>
+                        <div class="list-body">
+                            <div class="list-content1">
+                                لورم (0)
+                                <a href="#">
+                                    <span class="fas fa-link"></span>
+                                </a>
+                                <div class="list-tag">
+                                    <span class="label label-info" style="color:white; background: rgb(189, 26, 94)">تست</span>
+                                </div>
+                            </div>
+                            <div class="list-content2">
+                                <div class="list-date">6 دقیقه قبل</div>
                             </div>
                         </div>
-                        <div class="list-content2">
-                            <div class="list-date">6 دقیقه قبل</div>
+                        <div class="list-body">
+                            <div class="list-content1">
+                                لورم (0)
+                                <a href="#">
+                                    <span class="fas fa-link"></span>
+                                </a>
+                                <div class="list-tag">
+                                    <span class="label label-info" style="color:white; background: rgb(189, 26, 94)">تست</span>
+                                </div>
+                            </div>
+                            <div class="list-content2">
+                                <div class="list-date">6 دقیقه قبل</div>
+                            </div>
                         </div>
-                    </div>
                     </div>
 
-                    <div class="grid-box content-grid" id="contentGrid"">
+                    <div class="grid-box-format" id="contentGrid">
+                        <div class="grid-box content-grid">
                             <div class=" grid-blog">
-                        <div class="grid-blok-img">
-                            <a href="">
-                                <img src="image/voice3_13-634x433.jpg" alt="">
-                            </a>
+                                <div class="grid-blok-img">
+                                    <a href="">
+                                        <img src="image/voice3_13-634x433.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="grid-blok-text">
+                                    <span>lorem (0)</span>
+                                </div>
+                            </div>
+                            <div class="grid-blog">
+                                <div class="grid-blok-img">
+                                    <a href="">
+                                        <img src="image/voice3_13-634x433.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="grid-blok-text">
+                                    <span>lorem (0)</span>
+                                </div>
+                            </div>
+                            <div class="grid-blog">
+                                <div class="grid-blok-img">
+                                    <a href="">
+                                        <img src="image/voice3_13-634x433.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="grid-blok-text">
+                                    <span>lorem (0)</span>
+                                </div>
+                            </div>
+                            <div class="grid-blog">
+                                <div class="grid-blok-img">
+                                    <a href="">
+                                        <img src="image/voice3_13-634x433.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="grid-blok-text">
+                                    <span>lorem (0)</span>
+                                </div>
+                            </div>
+                            <div class="grid-blog">
+                                <div class="grid-blok-img">
+                                    <a href="">
+                                        <img src="image/voice3_13-634x433.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="grid-blok-text">
+                                    <span>lorem (0)</span>
+                                </div>
+                            </div>
+                            <div class="grid-blog">
+                                <div class="grid-blok-img">
+                                    <a href="">
+                                        <img src="image/voice3_13-634x433.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="grid-blok-text">
+                                    <span>lorem (0)</span>
+                                </div>
+                            </div>
+                            <div class="grid-blog">
+                                <div class="grid-blok-img">
+                                    <a href="">
+                                        <img src="image/voice3_13-634x433.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="grid-blok-text">
+                                    <span>lorem (0)</span>
+                                </div>
+                            </div>
+                            <div class="grid-blog">
+                                <div class="grid-blok-img">
+                                    <a href="">
+                                        <img src="image/voice3_13-634x433.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="grid-blok-text">
+                                    <span>lorem (0)</span>
+                                </div>
+                            </div>
+                            <div class="grid-blog">
+                                <div class="grid-blok-img">
+                                    <a href="">
+                                        <img src="image/voice3_13-634x433.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="grid-blok-text">
+                                    <span>lorem (0)</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="grid-blok-text">
-                            <span>lorem (0)</span>
-                        </div>
-                    </div>
-                    <div class="grid-blog">
-                        <div class="grid-blok-img">
-                            <a href="">
-                                <img src="image/voice3_13-634x433.jpg" alt="">
-                            </a>
-                        </div>
-                        <div class="grid-blok-text">
-                            <span>lorem (0)</span>
-                        </div>
-                    </div>
-                    <div class="grid-blog">
-                        <div class="grid-blok-img">
-                            <a href="">
-                                <img src="image/voice3_13-634x433.jpg" alt="">
-                            </a>
-                        </div>
-                        <div class="grid-blok-text">
-                            <span>lorem (0)</span>
-                        </div>
-                    </div>
-                    <div class="grid-blog">
-                        <div class="grid-blok-img">
-                            <a href="">
-                                <img src="image/voice3_13-634x433.jpg" alt="">
-                            </a>
-                        </div>
-                        <div class="grid-blok-text">
-                            <span>lorem (0)</span>
-                        </div>
-                    </div>
-                    <div class="grid-blog">
-                        <div class="grid-blok-img">
-                            <a href="">
-                                <img src="image/voice3_13-634x433.jpg" alt="">
-                            </a>
-                        </div>
-                        <div class="grid-blok-text">
-                            <span>lorem (0)</span>
-                        </div>
-                    </div>
-                    <div class="grid-blog">
-                        <div class="grid-blok-img">
-                            <a href="">
-                                <img src="image/voice3_13-634x433.jpg" alt="">
-                            </a>
-                        </div>
-                        <div class="grid-blok-text">
-                            <span>lorem (0)</span>
-                        </div>
-                    </div>
-                    <div class="grid-blog">
-                        <div class="grid-blok-img">
-                            <a href="">
-                                <img src="image/voice3_13-634x433.jpg" alt="">
-                            </a>
-                        </div>
-                        <div class="grid-blok-text">
-                            <span>lorem (0)</span>
-                        </div>
-                    </div>
-                    <div class="grid-blog">
-                        <div class="grid-blok-img">
-                            <a href="">
-                                <img src="image/voice3_13-634x433.jpg" alt="">
-                            </a>
-                        </div>
-                        <div class="grid-blok-text">
-                            <span>lorem (0)</span>
-                        </div>
-                    </div>
-                    <div class="grid-blog">
-                        <div class="grid-blok-img">
-                            <a href="">
-                                <img src="image/voice3_13-634x433.jpg" alt="">
-                            </a>
-                        </div>
-                        <div class="grid-blok-text">
-                            <span>lorem (0)</span>
-                        </div>
-                    </div>
                     </div>
 
                     <div class="pagination-box">
@@ -467,18 +468,15 @@
                             <li><a href="">1</a></li>
                             <li><a href="">2</a></li>
                             <li><a href="">3</a></li>
-                            <li><a href="">4</a></li>
-                            <li><a href="">5</a></li>
-                            <li><a href="">6</a></li>
                             <li>
                                 <a href="">بعدی</a>
                             </li>
 
                         </ul>
                         <select id="pagesizeSelect" class="form-control">
-                            <option value="10" class="" selected="selected">۱۰ در هر صفحه</option>
-                            <option value="20" class="">۲۰ در هر صفحه</option>
-                            <option value="30" class="">۳۰ در هر صفحه</option>
+                            <option value="10" class="" selected="selected">۱۰</option>
+                            <option value="20" class="">۲۰</option>
+                            <option value="30" class="">۳۰</option>
                         </select>
                     </div>
 
