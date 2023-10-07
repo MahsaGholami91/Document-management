@@ -204,7 +204,7 @@
     margin-bottom: 0.5rem;
 }
 
-.login-container .left-part .form-container .sign-forget .btn-primary {
+/* .login-container .left-part .form-container .sign-forget .btn-primary {
     background-color: #2aabd2;
     border-color: transparent;
 }
@@ -219,7 +219,7 @@
     color: #fff;
     background-color: #286090;
     border-color: #122b40;
-}
+} */
 
 .btn:hover,
 .btn:focus {
@@ -1027,7 +1027,7 @@ label {
     padding: 0px 50px;
 }
 
-.main-page-right .tags-head .side .form-group .save-btn .btn-primary,
+/* .main-page-right .tags-head .side .form-group .save-btn .btn-primary,
 .main-page-right .tags-head .side .form-group .plus-btn .btn-primary[disabled]:hover,
 .btn-primary {
     color: #fff;
@@ -1039,7 +1039,7 @@ label {
     color: #fff;
     background-color: #286090;
     border-color: #204d74;
-}
+} */
 
 .label-info {
     background-color: #5bc0de;
@@ -1062,10 +1062,10 @@ label {
     border-radius: 3px;
 }
 
-.tags-head .side .btn-primary[disabled]:hover {
+/* .tags-head .side .btn-primary[disabled]:hover {
     background-color: #337ab7;
     border-color: #2e6da4;
-}
+} */
 
 
 
@@ -1702,7 +1702,9 @@ label {
     padding: 19px;
     margin-bottom: 20px;
 }
-
+.grid-blok-img img , .upload-item img {
+    width: 100%;
+}
 .part-two {
     background-color: #fff4f4 !important;
     border: 1px solid #eee;
@@ -1817,5 +1819,57 @@ label {
 .upload-box input[type=checkbox] {
     width: 20px;
     height: 20px;
+}
+.save-doc  {
+    border-bottom: 1px solid #ddd;
+}
+.save-doc .save-doc-btn {
+    margin-bottom: 10px;
+}
+.doc-blok {
+    margin-top: 20px;
+}
+.doc-blok h3{
+    border-bottom: 1px solid #ddd;
+    padding: 5px;
+}
+.doc-title {
+    display: flex;
+    align-items: baseline;
+    margin: 15px;
+}
+.doc-description {
+    display: flex;
+    align-items: baseline;
+    margin: 15px;
+}
+.doc-creation-date {
+    display: flex;
+    align-items: baseline;
+    margin: 15px;
+}
+.doc-language {
+    display: flex;
+    align-items: baseline;
+    margin: 15px;
+}
+.doc-newFiles {
+    display: flex;
+    align-items: baseline;
+    margin: 15px;
+}
+.doc-tags {
+    display: flex;
+    align-items: baseline;
+    margin: 15px;
+}
+
+.doc-fields {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px; 
+}
+.doc-fields label {
+    margin-left: 10px;
 }
 /* ------- */
