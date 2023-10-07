@@ -1816,56 +1816,136 @@ label {
 }
 .save-doc  {
     border-bottom: 1px solid #ddd;
+    text-align: end;
 }
 .save-doc .save-doc-btn {
     margin-bottom: 10px;
+    background-color: #6ca0d0;
+    color: white;
 }
-.doc-blok {
-    margin-top: 20px;
+.first-doc-blok {
+    margin: 20px 0;
 }
-.doc-blok h3{
+.first-doc-blok h3{
     border-bottom: 1px solid #ddd;
     padding: 5px;
 }
-.doc-title {
+.first-doc-blok .doc-title {
     display: flex;
     align-items: baseline;
-    margin: 15px;
+    /* margin: 15px; */
 }
-.doc-description {
+.first-doc-blok .doc-description {
     display: flex;
     align-items: baseline;
-    margin: 15px;
+    /* margin: 15px; */
 }
-.doc-creation-date {
+.first-doc-blok .doc-creation-date {
     display: flex;
     align-items: baseline;
-    margin: 15px;
+    /* margin: 15px; */
 }
-.doc-language {
+.first-doc-blok .doc-language {
     display: flex;
     align-items: baseline;
-    margin: 15px;
+    /* margin: 15px; */
 }
-.doc-newFiles {
+.first-doc-blok .doc-newFiles {
     display: flex;
     align-items: baseline;
-    margin: 15px;
+    /* margin: 15px; */
 }
-.doc-tags {
+.first-doc-blok .doc-tags {
     display: flex;
     align-items: baseline;
-    margin: 15px;
+    /* margin: 15px; */
 }
 
-.doc-fields {
+.first-doc-blok .doc-fields {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 10px; 
+    margin: 20px 50px 0 0;
 }
-.doc-fields label {
-    margin-left: 10px;
+.first-doc-blok .doc-fields label {
+    flex: 6%;
+    text-align: right;
 }
+.first-doc-blok .doc-creation-date span {
+    border: 1px solid #ddd;
+}
+.second-doc-blok {
+    margin: 20px 0;
+}
+.second-doc-blok .additional {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 1px solid #ddd;
+}
+.second-doc-blok  .additional span {
+    font-size: large;
+    font-weight: bold;
+}
+.second-doc-blok .doc-title {
+    display: flex;
+    align-items: baseline;
+    /* margin: 15px; */
+}
+.second-doc-blok .doc-description {
+    display: flex;
+    align-items: baseline;
+    /* margin: 15px; */
+}
+.second-doc-blok .doc-creation-date {
+    display: flex;
+    align-items: baseline;
+    /* margin: 15px; */
+}
+.second-doc-blok .doc-language {
+    display: flex;
+    align-items: baseline;
+    /* margin: 15px; */
+}
+.second-doc-blok .doc-newFiles {
+    display: flex;
+    align-items: baseline;
+    /* margin: 15px; */
+}
+.second-doc-blok .doc-tags {
+    display: flex;
+    align-items: baseline;
+    /* margin: 15px; */
+}
+
+.second-doc-blok .doc-extra-fields {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px; 
+    margin: 20px 50px 0 0;
+}
+.second-doc-blok .doc-extra-fields label {
+    flex: 6%;
+    text-align: right;
+}
+.second-doc-blok .doc-creation-date span {
+    border: 1px solid #ddd;
+}
+.button-blok {
+    margin-right: 10%;
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-start;
+}
+.button-blok .save-doc-btn {
+    margin-bottom: 10px;
+    background-color: #6ca0d0;
+    color: white;
+}
+.plus-btn {
+    cursor: pointer;
+}
+
 /* ------- */
 
 .colorpicker-input {
