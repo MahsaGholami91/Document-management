@@ -119,17 +119,11 @@
     background-color: #ddd;
 }
 
-@media (max-width: 991px) {
-    .login-form {
-        max-width: 80%;
-    }
+.search-input-group {
+    border-radius: 5px 0 0 5px !important;
 }
 
-@media (max-width: 768px) {
-    .left-login {
-        display: none;
-    }
-}
+
 
 
 .login-container {
@@ -399,7 +393,7 @@ ul.tag-tree li {
 }
 
 .sidebar {
-    flex: 20%;
+    flex: 1;
     text-align: right;
 }
 
@@ -419,20 +413,20 @@ ul.tag-tree li {
 
 .main-page {
     display: flex;
-    align-items: baseline;
+    /* align-items: baseline; */
     width: 100%;
     padding: 0 20px;
     margin-bottom: 100px;
 }
 
 .main-page-right {
-    flex: 5;
+    flex: 2;
     text-align: right;
     margin-right: 30px;
 }
-
-
-
+.row-table {
+    display: table !important;
+}
 .input-group-btn {
     padding: 6px 12px;
     font-size: 14px;
@@ -442,6 +436,7 @@ ul.tag-tree li {
     text-align: center;
     background-color: #eee;
     border: 1px solid #ccc;
+    cursor: pointer;
 }
 
 .all-side table {
@@ -1014,8 +1009,7 @@ label {
 }
 
 .btn.disabled,
-.btn[disabled],
-.btn {
+.btn[disabled] {
     cursor: not-allowed;
     filter: alpha(opacity=65);
     box-shadow: none;
@@ -1953,3 +1947,65 @@ label {
 }
 
 /* ------- */
+
+.colorpicker-input {
+    height: 35px;
+    border: 1px solid #ccc;
+    border-right: 0;
+    border-radius: 5px 0 0 5px;
+    box-shadow: 0 0 0 1px rgba(49,49,93,.03), 0 2px 5px 0 rgba(49,49,93,.1), 0 1px 2px 0 rgba(0,0,0,.08);
+}
+.colorpicker-group {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.colorpicker-group .colorpicker-btn {
+    border-radius: 0 5px 5px 0;
+}
+
+.colorpicker-btn {
+    padding: 6px 15px !important;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+    height:  34px;
+}
+.plus-icon {
+    position: absolute;
+    right: 4px;
+    top: 2px;
+}
+.nowrap {
+    flex-wrap: nowrap !important;
+}
+.grid-box-format {
+    display: none;
+}
+
+@media (max-width: 991px) {
+    .login-form {
+        max-width: 80%;
+    }
+    .tags-head .side {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .left-login {
+        display: none;
+    }
+    .mobile-column {
+        flex-direction: column;
+    }
+    .tags-head .side {
+        width: 100%;
+    }
+    .main-page-right {
+        margin-right: 0;
+    }
+}
