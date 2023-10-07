@@ -1676,6 +1676,7 @@ label {
 
 .pagination-box {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     padding: 0 20px;
 }
@@ -1749,7 +1750,9 @@ label {
     padding: 3px 5px;
     font-size: 12px;
     line-height: 1.5;
-    display: inline-block;
+    display: flex;
+    gap: 5px;
+    flex-wrap: nowrap;
 }
 
 .upload-box {
@@ -1984,6 +1987,9 @@ label {
 }
 .grid-box-format {
     display: none;
+}
+.fa-exclamation-triangle:before, .fa-triangle-exclamation:before, .fa-warning:before {
+    font-size: 25px !important;
 }
 
 @media (max-width: 991px) {
