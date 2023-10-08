@@ -1990,7 +1990,7 @@ label {
 }
 
 .button-blok {
-    margin-right: 10%;
+    margin-right: 0;
     display: flex;
     align-items: baseline;
     justify-content: flex-start;
@@ -2060,34 +2060,6 @@ label {
 .fa-triangle-exclamation:before,
 .fa-warning:before {
     font-size: 25px !important;
-}
-
-@media (max-width: 991px) {
-    .login-form {
-        max-width: 80%;
-    }
-
-    .tags-head .side {
-        width: 100%;
-    }
-}
-
-@media (max-width: 768px) {
-    .left-login {
-        display: none;
-    }
-
-    .mobile-column {
-        flex-direction: column;
-    }
-
-    .tags-head .side {
-        width: 100%;
-    }
-
-    .main-page-right {
-        margin-right: 0;
-    }
 }
 
 .btn-info {
@@ -2383,4 +2355,58 @@ label {
 }
 .changeable-box {
     margin-top: 15px;
+}
+
+
+
+.doc-elemets label {
+    flex:1
+}
+
+.doc-elemets .doc-input  {
+    flex:10
+}
+
+.calendar-flex {
+    display: flex;
+}
+
+.first-doc-blok .doc-fields {
+    margin: 20px 0;
+}
+.second-doc-blok .doc-extra-fields {
+    margin: 20px 0;
+}
+
+@media (max-width: 991px) {
+    .login-form {
+        max-width: 80%;
+    }
+
+    .tags-head .side {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .left-login {
+        display: none;
+    }
+
+    .mobile-column {
+        flex-direction: column;
+    }
+
+    .tags-head .side {
+        width: 100%;
+    }
+
+    .main-page-right {
+        margin-right: 0;
+    }
+    .doc-elemets {
+        flex-direction: column;
+        align-items: stretch !important;
+    }
+    
 }
