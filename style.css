@@ -2540,6 +2540,9 @@ label {
     .show-header-first {
         flex-direction: column;
     }
+    .show-doc-tabs .nav>li>a {
+        padding: 10px 5px;
+    }
 }
 @media (max-width: 500px) {
     .changeable-box .upload-files-list-box {
