@@ -71,7 +71,7 @@
     </nav>
 
     <div class="main-container">
-        <div class="main-page ">
+        <div class="main-page mobile-column">
             <div class="sidebar ">
                 <div class="side all-side">
                     <div class="add-doc-btn">
@@ -91,7 +91,7 @@
                         </div>
                     </div>
                     <div class=" search-dropdown-anchor">
-                        <div class=" input-group" id="search-box">
+                        <div class="input-group nowrap" id="search-box">
                             <input type="search" class="search-input form-control" placeholder="جستجو">
                             <ul class="dropdown-menu"></ul>
                             <span class="input-group-btn btn search-btn" onclick="toggleSearch()">
@@ -235,7 +235,7 @@
                                 <button class="btn btn-primary btn-add-tag">
                                     <span>
                                         <i class="fas fa-tag"></i>
-                                        <i class="fas fa-plus"></i>
+                                        <i class="fas fa-plus plus-icon"></i>
                                     </span>
                                 </button>
                             </div>
@@ -506,38 +506,38 @@
                 <div class="first-doc-blok">
                     <h3>افزودن سند</h3>
                     <div class="doc-fields">
-                        <div class="doc-title">
-                            <label for="">عنوان</label>
-                            <input type="text" class="form-control" name="" id="">
+                        <div class="doc-elemets doc-title">
+                            <label for="title">عنوان</label>
+                            <input type="text" class="doc-input form-control" name="title" id="title">
                         </div>
-                        <div class="doc-description">
-                            <label for="">توضیحات</label>
-                            <textarea class="form-control" name="" id="" cols="30" rows="10"></textarea>
+                        <div class="doc-elemets doc-description">
+                            <label for="description">توضیحات</label>
+                            <textarea class="doc-input form-control" name="description" id="description" cols="30" rows="10"></textarea>
                         </div>
-                        <div class="doc-creation-date">
-                            <label for="">تاریخ</label>
-                            <input type="text" class="form-control" name="" id="">
-                            <span class="">
+                        <div class="doc-elemets doc-creation-date">
+                            <label for="date">تاریخ</label>
+                            <div class="doc-input nowrap calendar-flex">
+                                <input type="text" class="form-control" name="date" id="date">
                                 <button type="button" class="btn btn-default">
                                     <i class="fas fa-calendar"></i>
                                 </button>
-                            </span>
+                            </div>
                         </div>
-                        <div class="doc-language">
-                            <label for="">زبان</label>
-                            <select class="form-control">
+                        <div class="doc-elemets doc-language">
+                            <label for="language">زبان</label>
+                            <select class="doc-input form-control" name="language">
                                 <option value="en">انگلیسی</option>
                                 <option value="fa">فارسی</option>
                                 <option value="fr">فرانسه</option>
                             </select>
                         </div>
-                        <div class="doc-newFiles">
-                            <label for="">فایل جدید</label>
-                            <input type="file" class="form-control" name="" id="">
+                        <div class="doc-elemets doc-newFiles">
+                            <label for="file">فایل جدید</label>
+                            <input type="file" class="doc-input form-control" name="file" id="file">
                         </div>
-                        <div class="doc-tags">
-                            <label for="">تگ ها</label>
-                            <input type="text" class="form-control" name="" id="" placeholder="تگ را وارد کنید">
+                        <div class="doc-elemets doc-tags">
+                            <label for="tags">تگ ها</label>
+                            <input type="text" class="doc-input form-control" name="tags" id="tags" placeholder="تگ را وارد کنید">
                         </div>
                     </div>
 
@@ -548,61 +548,61 @@
                         <span class="fas fa-plus plus-btn" id="extraToggle"></span>
                     </div>
                     <div class="doc-extra-fields display-none" id="extraDiv">
-                        <div class="doc-title">
+                        <div class="doc-elemets doc-title">
                             <label for="">موضوع</label>
-                            <input type="text" class="form-control" name="" id="" placeholder="موضوع منبع">
+                            <input type="text" class="doc-input form-control" name="" id="" placeholder="موضوع منبع">
                         </div>
-                        <div class="doc-title">
+                        <div class="doc-elemets doc-title">
                             <label for="">شناسه ها</label>
-                            <input type="text" class="form-control" name="" id=""
+                            <input type="text" class="doc-input form-control" name="" id=""
                                 placeholder="ارجاع بدون ابهام به منبع در یک زمینه معین">
                         </div>
-                        <div class="doc-title">
+                        <div class="doc-elemets doc-title">
                             <label for="">ناشر</label>
-                            <input type="text" class="form-control" name="" id=""
+                            <input type="text" class="doc-input form-control" name="" id=""
                                 placeholder="نهادی که مسئول در دسترس قرار دادن منبع است">
                         </div>
-                        <div class="doc-title">
+                        <div class="doc-elemets doc-title">
                             <label for="">قالب</label>
-                            <input type="text" class="form-control" name="" id=""
+                            <input type="text" class="doc-input form-control" name="" id=""
                                 placeholder="فرمت فایل، رسانه فیزیکی یا ابعاد منبع">
                         </div>
-                        <div class="doc-title">
+                        <div class="doc-elemets doc-title">
                             <label for="">منبع</label>
-                            <input type="text" class="form-control" name="" id=""
+                            <input type="text" class="doc-input form-control" name="" id=""
                                 placeholder="یک منبع مرتبط که منبع توصیف شده از آن مشتق شده است">
                         </div>
 
-                        <div class="doc-language">
+                        <div class="doc-elemets doc-language">
                             <label for="">مدل</label>
-                            <select class="form-control">
+                            <select class="doc-input form-control">
                                 <option value="" selected="selected"></option>
                                 <option value="en">انگلیسی</option>
                                 <option value="fa">فارسی</option>
                                 <option value="fr">فرانسه</option>
                             </select>
                         </div>
-                        <div class="doc-language">
+                        <div class="doc-elemets doc-language">
                             <label for="">پوشش</label>
-                            <select class="form-control">
+                            <select class="doc-input form-control">
                                 <option value="" selected="selected"></option>
                                 <option value="England">انگلیس</option>
                                 <option value="USA">آمریکا</option>
                                 <option value="france">فرانسه</option>
                             </select>
                         </div>
-                        <div class="doc-language">
+                        <div class="doc-elemets doc-language">
                             <label for="">حقوق</label>
-                            <select class="form-control">
+                            <select class="doc-input form-control">
                                 <option value="" selected="selected"></option>
                                 <option value="">لورم</option>
                                 <option value="">لورم</option>
                                 <option value="">لورم</option>
                             </select>
                         </div>
-                        <div class="doc-tags">
+                        <div class="doc-elemets doc-tags">
                             <label for="">روابط</label>
-                            <input type="text" class="form-control" name="" id="" placeholder="عنوان سند را تایپ کنید">
+                            <input type="text" class="doc-input form-control" name="" id="" placeholder="عنوان سند را تایپ کنید">
                         </div>
                     </div>
 
