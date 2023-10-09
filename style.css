@@ -2519,4 +2519,37 @@ label {
     .show-web {
         display: none;
     }
+    .show-content {
+        flex-direction: column;
+    }
+    .changeable-box .upload-files-list-box {
+        max-width: 600px;
+        overflow-x: auto;
+    }
+    .show-doc-side {
+        width: 100%;
+    }
+    
+}
+
+@media (max-width: 600px) {
+    .changeable-box .upload-files-list-box {
+        max-width: 470px;
+        overflow-x: auto;
+    }
+    .show-header-first {
+        flex-direction: column;
+    }
+}
+@media (max-width: 500px) {
+    .changeable-box .upload-files-list-box {
+        max-width: 370px;
+        overflow-x: auto;
+    }
+}
+@media (max-width: 400px) {
+    .changeable-box .upload-files-list-box {
+        max-width: 300px;
+        overflow-x: auto;
+    }
 }
