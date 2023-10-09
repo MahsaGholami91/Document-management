@@ -31,25 +31,25 @@
     <div class="mobile-menu" id="mobileMenu">
       <ul class="nav-bar">
         <li class="active">
-          <a href="#/document" ><span class="fas fa-book"></span> اسناد</a>
+          <a href="documents.html" ><span class="fas fa-book"></span> اسناد</a>
         </li>
         <li>
-          <a href="#/tag" class=""><span class="fas fa-tags"></span> تگ ها</a>
+          <a href="tags.html" class=""><span class="fas fa-tags"></span> تگ ها</a>
         </li>
         <li >
-          <a href="#/user" class=""><span class="fas fa-user"></span> کاربران و گروه ها</a>
+          <a href="user_group.html" class=""><span class="fas fa-user"></span> کاربران و گروه ها</a>
         </li>
       </ul>
 
       <ul class="nav-bar">
         <li>
-          <a href="#/settings/account" >
+          <a href="" >
             <span class="fas fa-user"></span>
             ادمین
           </a>
         </li>
         <li >
-          <a href="#/settings/account" >
+          <a href="setting.html" >
             <span class="fas fa-cog"></span> تنظیمات
           </a>
         </li>
@@ -70,17 +70,17 @@
                     <a class="nav-logo" href="">لوگو</a>
                 </li>
                 <li class="left-li">
-                    <a href="">
+                    <a href="documents.html">
                         <span class="fas fa-book"></span>
                         اسناد</a>
                 </li>
                 <li class="left-li">
-                    <a href=""> 
+                    <a href="tags.html"> 
                         <span class="fas fa-tags"></span>
                         تگ ها</a>
                 </li>
                 <li class="left-li">
-                    <a href="">
+                    <a href="user_group.html">
                         <span class="fas fa-user"></span>
                         کاربران و گروه ها</a>
                 </li>
@@ -94,7 +94,7 @@
                         ادمین</a>
                 </li>
                 <li  class="right-li">
-                    <a href="">
+                    <a href="setting.html">
                         <span class="fas fa-cog"></span>
                         تنظیمات</a>
                 </li>
@@ -115,12 +115,15 @@
             <div class="sidebar ">
                 <div class="side all-side">
                     <form class="form-inline text-center" name="tagForm" >
-                        <div class="input-group colorpicker-group" id="inputColor" >
-                            <span class="input-group-btn btn btn-default colorpicker-btn" style="background: rgb(58, 135, 173);">&nbsp;</span> 
-                            <input name="color" class="colorpicker-input"/>
-                        <span class="btn btn-primary mr-2">Add</span> 
+                        <div class="flex-add-tag">
+                            <div class="input-group flex-color-hex">
+                                <input type="text" name="color" class="form-control hex-code" value="3a87ad" data-jscolor="{}"> 
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="name" class="form-control" placeholder="تگ جدید">
+                            </div>
+                            <span class="btn btn-primary mr-2">اضافه</span> 
                         </div>
-                        <!-- <span class="text-danger">لورم اجازه ادمین تنظیمات نام</span> -->
                     </form>
                     <ul class="tag-tree">
                         <li  class="">
@@ -338,8 +341,7 @@
                                 <label class="control-label" for="inputColor">رنگ</label>
                                 <div class="inputColor">
                                     <div class="input-group colorpicker-group" id="inputColor" >
-                                        <span class="input-group-btn btn btn-default colorpicker-btn" style="background: rgb(58, 135, 173);">&nbsp;</span> 
-                                        <input name="color" class="colorpicker-input"/>
+                                        <input type="text" name="color" class="form-control hex-code" value="3a87ad" data-jscolor="{}"> 
                                     </div>
                                 </div>
                             </div>
@@ -466,5 +468,6 @@
         }
     }
     </script>
+    <script src="main.js"></script>
 </body>
 </html>

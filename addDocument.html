@@ -23,7 +23,7 @@
     <!-- <script src="js/jquery.js"></script> -->
     <!-- <script src="js/jquery.min.js"></script> -->
     <script src="js/jquery.min.map"></script>
-
+    
     <title>addDocument</title>
 </head>
 
@@ -41,25 +41,25 @@
         <div class="mobile-menu" id="mobileMenu">
             <ul class="nav-bar">
                 <li class="active">
-                    <a href="#/document"><span class="fas fa-book"></span> اسناد</a>
+                    <a href="document.html"><span class="fas fa-book"></span> اسناد</a>
                 </li>
                 <li>
-                    <a href="#/tag" class=""><span class="fas fa-tags"></span> تگ ها</a>
+                    <a href="tag.html" class=""><span class="fas fa-tags"></span> تگ ها</a>
                 </li>
                 <li>
-                    <a href="#/user" class=""><span class="fas fa-user"></span> کاربران و گروه ها</a>
+                    <a href="user_group.html" class=""><span class="fas fa-user"></span> کاربران و گروه ها</a>
                 </li>
             </ul>
 
             <ul class="nav-bar">
                 <li>
-                    <a href="#/settings/account">
+                    <a href="setting.html">
                         <span class="fas fa-user"></span>
                         ادمین
                     </a>
                 </li>
                 <li>
-                    <a href="#/settings/account">
+                    <a href="setting.html">
                         <span class="fas fa-cog"></span> تنظیمات
                     </a>
                 </li>
@@ -80,17 +80,17 @@
                     <a class="nav-logo" href="">لوگو</a>
                 </li>
                 <li class="left-li">
-                    <a href="/documents.html">
+                    <a href="documents.html">
                         <span class="fas fa-book"></span>
                         اسناد</a>
                 </li>
                 <li class="left-li">
-                    <a href="/tags.html">
+                    <a href="tags.html">
                         <span class="fas fa-tags"></span>
                         تگ ها</a>
                 </li>
                 <li class="left-li">
-                    <a href="/user_group.html">
+                    <a href="user_group.html">
                         <span class="fas fa-user"></span>
                         کاربران و گروه ها</a>
                 </li>
@@ -104,7 +104,7 @@
                         ادمین</a>
                 </li>
                 <li class="right-li">
-                    <a href="/setting.html">
+                    <a href="setting.html">
                         <span class="fas fa-cog"></span>
                         تنظیمات</a>
                 </li>
@@ -127,7 +127,7 @@
                 <div class="side all-side">
                     <div class="add-doc-btn">
                         <div class="btn-group dropdown" id="document-add-btn">
-                            <a href="#/document/add" class="btn btn-primary btn-add-txt">
+                            <a href="addDocument.html" class="btn btn-primary btn-add-txt">
                                 <span class="fas fa-plus"></span> افزودن یک سند
                             </a>
                             <button type="button" class="btn btn-primary dropdown-toggle dropbtn"
@@ -136,7 +136,7 @@
                             </button>
                             <ul class="dropdown-menu dropdown-content" id="myDropdown">
                                 <li>
-                                    <a href="" class="">Import from an email (EML format)</a>
+                                    <a href="" class="">از ایمیل </a>
                                 </li>
                             </ul>
                         </div>
@@ -562,8 +562,8 @@
                         </div>
                         <div class="doc-elemets doc-description">
                             <label for="description">توضیحات</label>
-                            <textarea class="doc-input form-control" name="description" id="description" cols="30"
-                                rows="10"></textarea>
+
+                            <textarea id="content" name="content" class="form-control" rows="10" columns="30"></textarea>
                         </div>
                         <div class="doc-elemets doc-creation-date">
                             <label for="date">تاریخ</label>
@@ -668,9 +668,9 @@
                 <div class="form-group">
                     <div class="button-blok">
                         <button type="submit" class="btn save-doc-btn" disabled="disabled">
-                            <span class="fas fa-save"></span> Save
+                            <span class="fas fa-save"></span> ذخیره
                         </button>
-                        <button type="submit" class="btn btn-default cancle-btn">Cancel</button>
+                        <button type="submit" class="btn btn-default cancle-btn">انصراف</button>
                     </div>
                 </div>
             </form>

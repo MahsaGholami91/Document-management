@@ -1,43 +1,17 @@
 <!DOCTYPE html>
-<html ng-app="app" lang="en">
-
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <title>jQuery UI Datepicker with Twitter Bootstrap Theme</title>
-    <link rel="stylesheet" href="https://unpkg.com/persian-datepicker@latest/dist/css/persian-datepicker.min.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="js/jquery.js"></script>
-    <script src="https://unpkg.com/persian-date@latest/dist/persian-date.min.js"></script>
-    <script src="https://unpkg.com/persian-datepicker@latest/dist/js/persian-datepicker.min.js"></script>
+	<title>jscolor Examples</title>
+	
 </head>
-
 <body>
-    <input type="text" class="persian-date" />
-    <button type="button" id="openCalender" class="btn btn-default ">
-        <i class="fas fa-calendar"></i>
-    </button>
 
-    <script>
 
-        $(document).ready(function () {
-            $(".persian-date").pDatepicker({
-                initialValueType: "gregorian",
-                format: "YYYY/MM/DD",
-                onSelect: "year"
-            });
+    <textarea id="content" name="content" class="ckeditor" ></textarea>
 
-            const $openCalender = $('#openCalender');
-            const $datePicker = $('.datepicker-container');
 
-            $datePicker.hide();
 
-            $openCalender.click(function () {
-                $datePicker.toggle();
-            });
-          
+    <script src="ckeditor/ckeditor.js"></script>
 
-        });
-    </script>
 </body>
-
 </html>

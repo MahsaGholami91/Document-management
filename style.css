@@ -204,23 +204,6 @@
     margin-bottom: 0.5rem;
 }
 
-/* .login-container .left-part .form-container .sign-forget .btn-primary {
-    background-color: #2aabd2;
-    border-color: transparent;
-}
-
-.login-container .left-part .form-container .sign-forget .btn-primary:hover {
-    color: #fff;
-    background-color: #286090;
-    border-color: #204d74;
-}
-
-.login-container .left-part .form-container .sign-forget .btn-primary:focus {
-    color: #fff;
-    background-color: #286090;
-    border-color: #122b40;
-} */
-
 .btn:hover,
 .btn:focus {
     color: #333;
@@ -2473,7 +2456,20 @@ label {
     color: #2ab2dc;
     background: 0;
 }
+.flex-add-tag {
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+ .flex-add-tag .hex-code {
 
+}
+.flex-add-tag .flex-color-hex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
 /* jalali */
 
 .pwt-btn-calendar {
