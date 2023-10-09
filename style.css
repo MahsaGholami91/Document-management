@@ -823,9 +823,6 @@ button.list-group-item {
 
 
 @media (min-width: 768px) {
-    .footer {
-        width: 50%;
-    }
 
     .form-inline .input-group {
         display: inline-table;
@@ -2529,6 +2526,9 @@ label {
     .show-doc-side {
         width: 100%;
     }
+    .footer {
+        width: 50%;
+    }
     
 }
 
@@ -2543,6 +2543,7 @@ label {
     .show-doc-tabs .nav>li>a {
         padding: 10px 5px;
     }
+    
 }
 @media (max-width: 500px) {
     .changeable-box .upload-files-list-box {
