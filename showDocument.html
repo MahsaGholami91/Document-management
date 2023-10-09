@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="css/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap/js/bootstrap.js">
@@ -552,370 +555,549 @@
             </div>
             <div class="show-content">
                 <div class="show-doc-tabs">
-                    <ul class="nav nav-tabs">
-                        <li class="active">
-                            <a href="">
-                                <span class="fas fa-file"></span> محتوا
-                            </a>
+
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item">
+
+                            <a class="nav-link active" data-toggle="tab" href="#content"><span
+                                    class="fas fa-file"></span> محتوا</a>
                         </li>
-                        <li>
-                            <a href="">
-                                <span class="fas fa-random"></span> جریان کار
-                            </a>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#workflow"><span class="fas fa-random"></span>
+                                جریان کار</a>
                         </li>
-                        <li>
-                            <a href="">
-                                <span class="fas fa-user"></span> مجوزها
-                            </a>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#permission"><span class="fas fa-user"></span>
+                                مجوزها</a>
                         </li>
-                        <li >
-                            <a href="">
-                                <span class="fas fa-tasks"></span> فعالیت ها
-                            </a>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#task"><span class="fas fa-tasks"></span> فعالیت
+                                ها</a>
                         </li>
                     </ul>
-                    <div class="changeable-box">
-                        <p>لورم ایپسوم</p>
-                        <div class="contributors">
-                            <h6>مشارکت کنندگان</h6>
-                            <span>
-                                <a class="btn" href=""><span class="fas fa-user"></span> ادمین</a>
-                            </span>
-                            <span>
-                                <a class="btn" href=""><span class="fas fa-user"></span> کاربر</a>
-                            </span>
-                        </div>
-                        <div class="btn-group list-grid-btn">
-                            <span class="btn btn-default btn-left-tab active-tab" id="uploadListTab">
-                                <span class="fas fa-list"></span>
-                            </span>
-                            <span class="btn btn-default btn-right-tab" id="uploadGridTab">
-                                <span class="fas fa-th"></span>
-                            </span>
-                        </div>
-                        <div class="upload-files-list-box" id="uploadFilesList">
 
+                    <div class="tab-content">
+                        <div id="content" class="container tab-pane active"><br>
+                            <div class="changeable-box">
+                                <p>لورم ایپسوم</p>
+                                <div class="contributors">
+                                    <h6>مشارکت کنندگان</h6>
+                                    <span>
+                                        <a class="btn" href=""><span class="fas fa-user"></span> ادمین</a>
+                                    </span>
+                                    <span>
+                                        <a class="btn" href=""><span class="fas fa-user"></span> کاربر</a>
+                                    </span>
+                                </div>
+                                <div class="btn-group list-grid-btn">
+                                    <span class="btn btn-default btn-left-tab active-tab" id="uploadListTab">
+                                        <span class="fas fa-list"></span>
+                                    </span>
+                                    <span class="btn btn-default btn-right-tab" id="uploadGridTab">
+                                        <span class="fas fa-th"></span>
+                                    </span>
+                                </div>
+                                <div class="upload-files-list-box" id="uploadFilesList">
+
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th width="3%"></th>
+                                                <th>عنوان</th>
+                                                <th>نوع</th>
+                                                <th>اندازه</th>
+                                                <th width="10%">ورژن</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="pointer">
+                                                    <div class="upload-files-img">
+                                                        <img src="image/voice_18-634x433.jpg">
+                                                    </div>
+                                                </td>
+                                                <td class="pointer">sample.pdf</td>
+                                                <td>application/pdf</td>
+                                                <td>19kB</td>
+                                                <td>v1.0</td>
+                                                <td>
+                                                    <div class="dropdown">
+                                                        <button class="btn btn-default more-action-btn">
+                                                            <span class="fas fa-ellipsis-v"></span>
+                                                        </button>
+                                                        <ul class="more-action-items more-actions">
+                                                            <li>
+                                                                <a href="">
+                                                                    <span class="fas fa-download"></span> دانلود
+                                                                </a>
+                                                            </li>
+                                                            <li class="separator"></li>
+                                                            <li>
+                                                                <a href="">
+                                                                    <span class="fas fa-pencil-alt"></span> ویرایش نام
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="">
+                                                                    <span class="fas fa-eye"></span> بارگداری مجدد
+                                                                </a>
+                                                            </li>
+                                                            <li class="separator"></li>
+                                                            <li>
+                                                                <a href="">
+                                                                    <span class="fas fa-plus"></span> آپلود ورژن جدید
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="">
+                                                                    <span class="fas fa-angle-double-left"></span> نمایش
+                                                                    تاریخچه
+                                                                    ورژن
+                                                                </a>
+                                                            </li>
+                                                            <li class="divider"></li>
+                                                            <li>
+                                                                <a href="">
+                                                                    <span class="fas fa-trash text-danger"></span> حذف
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                </div>
+
+                                <div class="upload-files-grid-box" id="uploadFilesGrid">
+                                    <div class="upload-grid-box">
+                                        <div class="upload-grid-blog">
+                                            <div class="grid-blok-img">
+                                                <a href="">
+                                                    <img src="image/voice3_13-634x433.jpg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="upload-grid-blok-text">
+                                                <span>lorem</span>
+                                                <div class="dropdown">
+                                                    <button class="btn btn-default more-action-btn">
+                                                        <span class="fas fa-ellipsis-v"></span>
+                                                    </button>
+                                                    <ul class="more-action-items more-actions">
+                                                        <li>
+                                                            <a href="">
+                                                                <span class="fas fa-download"></span> دانلود
+                                                            </a>
+                                                        </li>
+                                                        <li class="separator"></li>
+                                                        <li>
+                                                            <a href="">
+                                                                <span class="fas fa-pencil-alt"></span> ویرایش نام
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">
+                                                                <span class="fas fa-eye"></span> بارگداری مجدد
+                                                            </a>
+                                                        </li>
+                                                        <li class="separator"></li>
+                                                        <li>
+                                                            <a href="">
+                                                                <span class="fas fa-plus"></span> آپلود ورژن جدید
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">
+                                                                <span class="fas fa-angle-double-left"></span> نمایش
+                                                                تاریخچه
+                                                                ورژن
+                                                            </a>
+                                                        </li>
+                                                        <li class="divider"></li>
+                                                        <li>
+                                                            <a href="">
+                                                                <span class="fas fa-trash text-danger"></span> حذف
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="upload-grid-blog">
+                                            <div class="grid-blok-img">
+                                                <a href="">
+                                                    <img src="image/voice3_13-634x433.jpg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="upload-grid-blok-text">
+                                                <span>lorem</span>
+                                                <div class="dropdown">
+                                                    <button class="btn btn-default more-action-btn">
+                                                        <span class="fas fa-ellipsis-v"></span>
+                                                    </button>
+                                                    <ul class="more-action-items more-actions">
+                                                        <li>
+                                                            <a href="">
+                                                                <span class="fas fa-download"></span> دانلود
+                                                            </a>
+                                                        </li>
+                                                        <li class="separator"></li>
+                                                        <li>
+                                                            <a href="">
+                                                                <span class="fas fa-pencil-alt"></span> ویرایش نام
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">
+                                                                <span class="fas fa-eye"></span> بارگداری مجدد
+                                                            </a>
+                                                        </li>
+                                                        <li class="separator"></li>
+                                                        <li>
+                                                            <a href="">
+                                                                <span class="fas fa-plus"></span> آپلود ورژن جدید
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">
+                                                                <span class="fas fa-angle-double-left"></span> نمایش
+                                                                تاریخچه
+                                                                ورژن
+                                                            </a>
+                                                        </li>
+                                                        <li class="divider"></li>
+                                                        <li>
+                                                            <a href="">
+                                                                <span class="fas fa-trash text-danger"></span> حذف
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="upload-grid-blog">
+                                            <div class="grid-blok-img">
+                                                <a href="">
+                                                    <img src="image/voice3_13-634x433.jpg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="upload-grid-blok-text">
+                                                <span>lorem</span>
+                                                <div class="dropdown">
+                                                    <button class="btn btn-default more-action-btn">
+                                                        <span class="fas fa-ellipsis-v"></span>
+                                                    </button>
+                                                    <ul class="more-action-items more-actions">
+                                                        <li>
+                                                            <a href="">
+                                                                <span class="fas fa-download"></span> دانلود
+                                                            </a>
+                                                        </li>
+                                                        <li class="separator"></li>
+                                                        <li>
+                                                            <a href="">
+                                                                <span class="fas fa-pencil-alt"></span> ویرایش نام
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">
+                                                                <span class="fas fa-eye"></span> بارگداری مجدد
+                                                            </a>
+                                                        </li>
+                                                        <li class="separator"></li>
+                                                        <li>
+                                                            <a href="">
+                                                                <span class="fas fa-plus"></span> آپلود ورژن جدید
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">
+                                                                <span class="fas fa-angle-double-left"></span> نمایش
+                                                                تاریخچه
+                                                                ورژن
+                                                            </a>
+                                                        </li>
+                                                        <li class="divider"></li>
+                                                        <li>
+                                                            <a href="">
+                                                                <span class="fas fa-trash text-danger"></span> حذف
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="upload-grid-blog">
+                                            <div class="grid-blok-img">
+                                                <a href="">
+                                                    <img src="image/voice3_13-634x433.jpg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="upload-grid-blok-text">
+                                                <span>lorem</span>
+                                                <div class="dropdown">
+                                                    <button class="btn btn-default more-action-btn">
+                                                        <span class="fas fa-ellipsis-v"></span>
+                                                    </button>
+                                                    <ul class="more-action-items more-actions">
+                                                        <li>
+                                                            <a href="">
+                                                                <span class="fas fa-download"></span> دانلود
+                                                            </a>
+                                                        </li>
+                                                        <li class="separator"></li>
+                                                        <li>
+                                                            <a href="">
+                                                                <span class="fas fa-pencil-alt"></span> ویرایش نام
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">
+                                                                <span class="fas fa-eye"></span> بارگداری مجدد
+                                                            </a>
+                                                        </li>
+                                                        <li class="separator"></li>
+                                                        <li>
+                                                            <a href="">
+                                                                <span class="fas fa-plus"></span> آپلود ورژن جدید
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">
+                                                                <span class="fas fa-angle-double-left"></span> نمایش
+                                                                تاریخچه
+                                                                ورژن
+                                                            </a>
+                                                        </li>
+                                                        <li class="divider"></li>
+                                                        <li>
+                                                            <a href="">
+                                                                <span class="fas fa-trash text-danger"></span> حذف
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <div id="workflow" class="container tab-pane fade"><br>
+                            <div class="workflow-header">
+                                <p>با استفاده از گردش کار، اسناد خود را با افراد سازمانتان تأیید یا تأیید کنید.</p>
+                                <button class="btn btn-danger"><span class="fas fa-trash"></span>گردش کار فعلی را لغو
+                                    کنید</button>
+                            </div>
+                            <div class="workflow-header-detail">
+                                <p>بررسی اسناد</p>
+                                <span>در 28 سپتامبر 2023 آغاز شد</span>
+                            </div>
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th width="3%"></th>
-                                        <th>عنوان</th>
                                         <th>نوع</th>
-                                        <th>اندازه</th>
-                                        <th width="10%">ورژن</th>
-                                        <th></th>
+                                        <th>نام</th>
+                                        <th>برای</th>
+                                        <th>اعتبار سنجی</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td class="pointer">
-                                            <div class="upload-files-img">
-                                                <img src="image/voice_18-634x433.jpg">
-                                            </div>
-                                        </td>
-                                        <td class="pointer">sample.pdf</td>
-                                        <td>application/pdf</td>
-                                        <td>19kB</td>
-                                        <td>v1.0</td>
                                         <td>
-                                            <div class="dropdown">
-                                                <button class="btn btn-default more-action-btn" >
-                                                    <span class="fas fa-ellipsis-v"></span>
-                                                </button>
-                                                <ul class="more-action-items more-actions">
-                                                    <li>
-                                                        <a href="">
-                                                            <span class="fas fa-download"></span> دانلود
-                                                        </a>
-                                                    </li>
-                                                    <li class="separator"></li>
-                                                    <li>
-                                                        <a href="">
-                                                            <span class="fas fa-pencil-alt"></span> ویرایش نام
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="">
-                                                            <span class="fas fa-eye"></span> بارگداری مجدد
-                                                        </a>
-                                                    </li>
-                                                    <li class="separator"></li>
-                                                    <li>
-                                                        <a href="">
-                                                            <span class="fas fa-plus"></span> آپلود ورژن جدید
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="">
-                                                            <span class="fas fa-angle-double-left"></span> نمایش تاریخچه
-                                                            ورژن
-                                                        </a>
-                                                    </li>
-                                                    <li class="divider"></li>
-                                                    <li>
-                                                        <a href="">
-                                                            <span class="fas fa-trash text-danger"></span> حذف
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
+                                            <span class="fas fa-check-circle"></span> اعتبار سنجی
+                                        </td>
+                                        <td>سند را بررسی کنید</td>
+                                        <td>
+                                            <span><em>کاربر</em> معمولی</span>
+                                        </td>
+                                        <td>
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="fas fa-check-circle"></span> اعتبار سنجی
+                                        </td>
+                                        <td>فایل های مربوطه را به سند اضافه کنید</td>
+                                        <td>
+                                            <span><em>گروه</em> مدیران</span>
+                                        </td>
+                                        <td>
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="fas fa-exchange-alt"></span> موافقت رسمی
+                                        </td>
+                                        <td>سند را تایید کنید</td>
+                                        <td>
+                                            <span><em>گروه</em> مدیران</span>
+                                        </td>
+                                        <td>
+
                                         </td>
                                     </tr>
                                 </tbody>
                             </table>
-
                         </div>
-
-                        <div class="upload-files-grid-box" id="uploadFilesGrid">
-                            <div class="upload-grid-box">                               
-                                <div class="upload-grid-blog">
-                                    <div class="grid-blok-img">
-                                        <a href="">
-                                            <img src="image/voice3_13-634x433.jpg" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="upload-grid-blok-text">
-                                        <span>lorem</span>
-                                        <div class="dropdown">
-                                            <button class="btn btn-default more-action-btn" >
-                                                <span class="fas fa-ellipsis-v"></span>
-                                            </button>
-                                            <ul class="more-action-items more-actions" >
-                                                <li>
-                                                    <a href="">
-                                                        <span class="fas fa-download"></span> دانلود
-                                                    </a>
-                                                </li>
-                                                <li class="separator"></li>
-                                                <li>
-                                                    <a href="">
-                                                        <span class="fas fa-pencil-alt"></span> ویرایش نام
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="">
-                                                        <span class="fas fa-eye"></span> بارگداری مجدد
-                                                    </a>
-                                                </li>
-                                                <li class="separator"></li>
-                                                <li>
-                                                    <a href="">
-                                                        <span class="fas fa-plus"></span> آپلود ورژن جدید
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="">
-                                                        <span class="fas fa-angle-double-left"></span> نمایش تاریخچه
-                                                        ورژن
-                                                    </a>
-                                                </li>
-                                                <li class="divider"></li>
-                                                <li>
-                                                    <a href="">
-                                                        <span class="fas fa-trash text-danger"></span> حذف
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="upload-grid-blog">
-                                    <div class="grid-blok-img">
-                                        <a href="">
-                                            <img src="image/voice3_13-634x433.jpg" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="upload-grid-blok-text">
-                                        <span>lorem</span>
-                                        <div class="dropdown">
-                                            <button class="btn btn-default more-action-btn" >
-                                                <span class="fas fa-ellipsis-v"></span>
-                                            </button>
-                                            <ul class="more-action-items more-actions" >
-                                                <li>
-                                                    <a href="">
-                                                        <span class="fas fa-download"></span> دانلود
-                                                    </a>
-                                                </li>
-                                                <li class="separator"></li>
-                                                <li>
-                                                    <a href="">
-                                                        <span class="fas fa-pencil-alt"></span> ویرایش نام
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="">
-                                                        <span class="fas fa-eye"></span> بارگداری مجدد
-                                                    </a>
-                                                </li>
-                                                <li class="separator"></li>
-                                                <li>
-                                                    <a href="">
-                                                        <span class="fas fa-plus"></span> آپلود ورژن جدید
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="">
-                                                        <span class="fas fa-angle-double-left"></span> نمایش تاریخچه
-                                                        ورژن
-                                                    </a>
-                                                </li>
-                                                <li class="divider"></li>
-                                                <li>
-                                                    <a href="">
-                                                        <span class="fas fa-trash text-danger"></span> حذف
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="upload-grid-blog">
-                                    <div class="grid-blok-img">
-                                        <a href="">
-                                            <img src="image/voice3_13-634x433.jpg" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="upload-grid-blok-text">
-                                        <span>lorem</span>
-                                        <div class="dropdown">
-                                            <button class="btn btn-default more-action-btn" >
-                                                <span class="fas fa-ellipsis-v"></span>
-                                            </button>
-                                            <ul class="more-action-items more-actions" >
-                                                <li>
-                                                    <a href="">
-                                                        <span class="fas fa-download"></span> دانلود
-                                                    </a>
-                                                </li>
-                                                <li class="separator"></li>
-                                                <li>
-                                                    <a href="">
-                                                        <span class="fas fa-pencil-alt"></span> ویرایش نام
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="">
-                                                        <span class="fas fa-eye"></span> بارگداری مجدد
-                                                    </a>
-                                                </li>
-                                                <li class="separator"></li>
-                                                <li>
-                                                    <a href="">
-                                                        <span class="fas fa-plus"></span> آپلود ورژن جدید
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="">
-                                                        <span class="fas fa-angle-double-left"></span> نمایش تاریخچه
-                                                        ورژن
-                                                    </a>
-                                                </li>
-                                                <li class="divider"></li>
-                                                <li>
-                                                    <a href="">
-                                                        <span class="fas fa-trash text-danger"></span> حذف
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="upload-grid-blog">
-                                    <div class="grid-blok-img">
-                                        <a href="">
-                                            <img src="image/voice3_13-634x433.jpg" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="upload-grid-blok-text">
-                                        <span>lorem</span>
-                                        <div class="dropdown">
-                                            <button class="btn btn-default more-action-btn" >
-                                                <span class="fas fa-ellipsis-v"></span>
-                                            </button>
-                                            <ul class="more-action-items more-actions" >
-                                                <li>
-                                                    <a href="">
-                                                        <span class="fas fa-download"></span> دانلود
-                                                    </a>
-                                                </li>
-                                                <li class="separator"></li>
-                                                <li>
-                                                    <a href="">
-                                                        <span class="fas fa-pencil-alt"></span> ویرایش نام
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="">
-                                                        <span class="fas fa-eye"></span> بارگداری مجدد
-                                                    </a>
-                                                </li>
-                                                <li class="separator"></li>
-                                                <li>
-                                                    <a href="">
-                                                        <span class="fas fa-plus"></span> آپلود ورژن جدید
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="">
-                                                        <span class="fas fa-angle-double-left"></span> نمایش تاریخچه
-                                                        ورژن
-                                                    </a>
-                                                </li>
-                                                <li class="divider"></li>
-                                                <li>
-                                                    <a href="">
-                                                        <span class="fas fa-trash text-danger"></span> حذف
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-
+                        <div id="permission" class="container tab-pane fade"><br>
+                            <p>مجوزها را می‌توان مستقیماً روی این سند اعمال کرد، یا می‌تواند از آن گرفته شود <a
+                                    href="#">تگ</a>.</p>
+                            <div class="side">
+                                <p class="">لورم ایپسوم ادمین اسناد انسانی
+                                    <span class="label label-info">شعبه</span>
+                                </p>
+                                <div class="">
+                                    <table class="table">
+                                        <tbody>
+                                            <tr>
+                                                <th style="width: 40%" class="">برای</th>
+                                                <th style="width: 40%" class="">دسترسی</th>
+                                            </tr>
+                                            <tr class="">
+                                                <td>
+                                                    <span class=" ">
+                                                        <em class="">کاربر</em> ادمین
+                                                    </span>
+                                                </td>
+                                                <td>
+                                                    <span class="label label-default  "
+                                                        style="margin-right: 6px">میتواند بخواند
+                                                    </span>
+                                                    <span class="label label-default  "
+                                                        style="margin-right: 6px">میتواند بنویسد
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="">
+                                        <h4 class="">اجازه دسترسی</h4>
+                                        <form name="" class="">
+                                            <div class="form-group">
+                                                <label class=" control-label " for="inputTarget">برای</label>
+                                                <div class="inputTarget">
+                                                    <input required="" class="form-control" type="text"
+                                                        id="inputTarget">
+                                                    <ul class="dropdown-menu ">
+                                                    </ul>
+                                                </div>
+                                                <div class=""></div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class=" control-label " for="inputPermission">دسترسی</label>
+                                                <div class="inputPermission">
+                                                    <select class="form-control" id="inputPermission">
+                                                        <option value="READ" class="" selected="selected">برای خواندن
+                                                        </option>
+                                                        <option value="READWRITE" class="">Can write</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="plus-btn">
+                                                    <button type="submit" class="btn btn-primary ">
+                                                        <span class="fas fa-plus"></span> اضافه
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
-                               
-                       
+                            <div class="side">
+                                <h3>مجوزهای به ارث رسیده توسط برچسب ها</h3>
+                                <table class="table table-permissions">
+                                    <tbody>
+                                        <tr>
+                                            <th style="width: 30%">از</th>
+                                            <th style="width: 30%">برای</th>
+                                            <th style="width: 30%">مجوز</th>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="#">
+                                                    <span class="fas fa-tags"
+                                                        style="color: rgb(237, 104, 47);"></span>&nbsp; لورم
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <span><em>کاربر</em> معمولی</span>
+                                            </td>
+                                            <td>
+                                                <span class="label label-default label-acl">خواندن</span>
+                                                <span class="label label-default label-acl">نوشتن</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="#">
+                                                    <span class="fas fa-tags"
+                                                        style="color: rgb(237, 104, 47);"></span>&nbsp; لورم
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <span><em>کاربر</em> مهمان</span>
+                                            </td>
+                                            <td>
+                                                <span class="label label-default label-acl">خواندن</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div id="task" class="container tab-pane fade"><br>
+                            <p>همه اقدامات در این سند در اینجا ثبت می شود.</p>
+                        </div>
                     </div>
+
+
                 </div>
-            </div>
-            <div class="show-doc-side">
-                <div class="">
-                    <p class="page-header page-header-side">
-                        <span class="fas fa-random"></span> مرحله گردش کار فعلی
-                    </p>
-                    <div class="text-center card">
-                        <p class="">سند را بررسی کنید</p>
-                        <p class="">
-                            <span class="fas fa-check-circle"></span>اعتبار سنجی 
-                            <span class="label label-default">
-                                <span><em>کاربر</em> دمو</span>
-                            </span>
+                <div class="show-doc-side">
+                    <div class="">
+                        <p class="page-header page-header-side">
+                            <span class="fas fa-random"></span> مرحله گردش کار فعلی
                         </p>
-                       
+                        <div class="text-center card">
+                            <p class="">سند را بررسی کنید</p>
+                            <p class="">
+                                <span class="fas fa-check-circle"></span>اعتبار سنجی
+                                <span class="label label-default">
+                                    <span><em>کاربر</em> دمو</span>
+                                </span>
+                            </p>
+
+                        </div>
                     </div>
-                </div>
-                <p class="page-header page-header-side">
-                    <span class="fas fa-comments"></span> نظرات
-                </p>
-                <div class="text-center text-muted">
-                    <h1 class="fas fa-comments"></h1>
-                    <p class="">درحال بارگداری...</p>
-                    <p class="">هنوز نظری در مورد این سند وجود ندارد</p>
-                    <p class="">خطا در بارگداری نظرات</p>
-                </div>
-                <form class="">
-                    <div class="form-group">
-                        <label class="sr-only" for="commentInput">نظر اضافه کنید</label>
-                        <input type="text" class="form-control" id="" placeholder="نظر اضافه کنید">
+                    <p class="page-header page-header-side">
+                        <span class="fas fa-comments"></span> نظرات
+                    </p>
+                    <div class="text-center text-muted">
+                        <h1 class="fas fa-comments"></h1>
+                        <p class="">درحال بارگداری...</p>
+                        <p class="">هنوز نظری در مورد این سند وجود ندارد</p>
+                        <p class="">خطا در بارگداری نظرات</p>
                     </div>
-                </form>
+                    <form class="">
+                        <div class="form-group">
+                            <label class="sr-only" for="commentInput">نظر اضافه کنید</label>
+                            <input type="text" class="form-control" id="" placeholder="نظر اضافه کنید">
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
     </div>
     </div>
 

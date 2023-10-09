@@ -965,6 +965,7 @@ label {
     width: 50%;
 }
 
+
 .tags-head .side .form-group {
     display: flex;
     align-items: baseline;
@@ -2175,9 +2176,9 @@ label {
     color: #586069;
 }
 
-.show-doc-tabs .nav-tabs>li.active>a,
-.show-doc-tabs .nav-tabs>li.active>a:hover,
-.show-doc-tabs .nav-tabs>li.active>a:focus {
+.show-doc-tabs .nav-tabs>li>a.active,
+.show-doc-tabs .nav-tabs>li>a.active:hover,
+.show-doc-tabs .nav-tabs>li>a.active:focus {
     color: #24292e;
     cursor: default;
     background-color: #fff;
@@ -2356,8 +2357,63 @@ label {
 .changeable-box {
     margin-top: 15px;
 }
+.workflow-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 15px;
+}
+.nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
+    border: none; 
+}
+.nav-tabs>li>a:hover {
+    color: #24292e;
+    
+}
+
+.nav>li>a:hover, .nav>li>a:focus {
+    text-decoration: none;
+}
+.workflow-header-detail {
+    display: flex;
+}
+.workflow-header-detail p {
+    margin-left: 5px;
+    font-weight: bold;
+    color: #777;
+}
+.workflow-header-detail span {
+    color: #777;
+}
+
+.tab-content .side {
+    min-height: 20px;
+    padding: 20px 30px;
+    margin: 20px 0px;
+    background-color: #f5f5f5;
+    width: 100%;
+}
+
+.tab-content .side .form-group {
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-start;
+}
 
 
+.tab-content .side .inputTarget {
+    width: 60%;
+    padding: 0px 30px;
+}
+
+.tab-content .side .inputPermission {
+    width: 60%;
+    padding: 0px 5px 0 53px;
+}
+.tab-content .side .plus-btn {
+    width: 100%;
+    padding: 0px 50px;
+}
 
 .doc-elemets label {
     flex:1
@@ -2408,5 +2464,4 @@ label {
         flex-direction: column;
         align-items: stretch !important;
     }
-    
 }
