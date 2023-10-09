@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap/js/bootstrap.js">
     <link rel="stylesheet" href="css/bootstrap/js/bootstrap.min.js">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
     <script src="js/jquery.js"></script>
     <script src="js/jquery.min.js"></script>
@@ -101,7 +103,7 @@
                                         id="mySearchDropdown" style="top: 24px; display: none; left: 0px; right: auto;">
                                         <form class="search-form" name="searchForm">
                                             <div class="form-group">
-                                                <label class="control-label sr-only " for="inputSearchSimple">جستجو
+                                                <label class="control-label mgo " for="inputSearchSimple">جستجو
                                                     ساده</label>
                                                 <div class="">
                                                     <input type="text" id="inputSearchSimple" class="form-control"
@@ -109,7 +111,7 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="control-label sr-only " for="inputSearchFulltext">جستجوی
+                                                <label class="control-label mgo " for="inputSearchFulltext">جستجوی
                                                     تمام متن</label>
                                                 <div class="">
                                                     <input type="text" id="inputSearchFulltext" class="form-control"
@@ -117,7 +119,7 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="control-label sr-only " for="inputSearchCreator">ایجاد
+                                                <label class="control-label mgo " for="inputSearchCreator">ایجاد
                                                     کننده</label>
                                                 <div class="">
                                                     <input type="text" id="inputSearchCreator" class="form-control"
@@ -126,8 +128,7 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="control-label sr-only "
-                                                    for="inputSearchLanguage">زبان</label>
+                                                <label class="control-label mgo " for="inputSearchLanguage">زبان</label>
                                                 <div class="">
                                                     <select class="form-control" id="inputSearchLanguage">
                                                         <option value="" class="" selected="selected">همه زبان ها
@@ -138,7 +139,7 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="control-label sr-only " for="inputSearchAfterDate">بعد از
+                                                <label class="control-label mgo " for="inputSearchAfterDate">بعد از
                                                     این تاریخ ایجاد شد</label>
                                                 <div class="">
                                                     <input type="text" id="inputSearchAfterDate"
@@ -147,7 +148,7 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="control-label sr-only " for="inputSearchBeforeDate">قبل از
+                                                <label class="control-label mgo " for="inputSearchBeforeDate">قبل از
                                                     این تاریخ ایجاد شد</label>
                                                 <div class="">
                                                     <input type="text" id="inputSearchBeforeDate"
@@ -156,8 +157,8 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="control-label sr-only "
-                                                    for="inputSearchAfterUpdateDate">بعد از این تاریخ به روز شد</label>
+                                                <label class="control-label mgo " for="inputSearchAfterUpdateDate">بعد
+                                                    از این تاریخ به روز شد</label>
                                                 <div class="">
                                                     <input type="text" id="inputSearchAfterUpdateDate"
                                                         class="form-control -date"
@@ -165,8 +166,8 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="control-label sr-only "
-                                                    for="inputSearchBeforeUpdateDate">قبل از این تاریخ به روز شد</label>
+                                                <label class="control-label mgo " for="inputSearchBeforeUpdateDate">قبل
+                                                    از این تاریخ به روز شد</label>
                                                 <div class="">
                                                     <input type="text" id="inputSearchBeforeUpdateDate"
                                                         class="form-control-date"
@@ -174,7 +175,7 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="control-label sr-only " for="inputSearchTags">تک
+                                                <label class="control-label mgo " for="inputSearchTags">تک
                                                     ها</label>
                                                 <div class="">
                                                     <div tags="advsearch.tags" ref="inputSearchTags" class="">
@@ -284,89 +285,89 @@
 
                     <div class="list-box content-list" id="contentList">
                         <div class=" list-header">
-                        <div class="list-head">
-                            <span>عنوان</span>
-                            <span class="fas fa-chevron-up"></span>
-                        </div>
-                        <div class="list-head">
-                            <span>زمان تولید</span>
-                            <span class="fas fa-chevron-up"></span>
-                        </div>
-                    </div>
-                    <div class="list-body">
-                        <div class="list-content1">
-                            لورم (0)
-                            <a href="#">
-                                <span class="fas fa-link"></span>
-                            </a>
-                            <div class="list-tag">
-                                <span class="label label-info" style="color:white; background: red">تست</span>
+                            <div class="list-head">
+                                <span>عنوان</span>
+                                <span class="fas fa-chevron-up"></span>
+                            </div>
+                            <div class="list-head">
+                                <span>زمان تولید</span>
+                                <span class="fas fa-chevron-up"></span>
                             </div>
                         </div>
-                        <div class="list-content2">
-                            <div class="list-date">6 دقیقه قبل</div>
-                        </div>
-                    </div>
-                    <div class="list-body">
-                        <div class="list-content1">
-                            لورم (0)
-                            <a href="#">
-                                <span class="fas fa-link"></span>
-                            </a>
-                            <div class="list-tag">
-                                <span class="label label-info" style="color:white; background: red">تست</span>
+                        <div class="list-body">
+                            <div class="list-content1">
+                                لورم (0)
+                                <a href="#">
+                                    <span class="fas fa-link"></span>
+                                </a>
+                                <div class="list-tag">
+                                    <span class="label label-info" style="color:white; background: red">تست</span>
+                                </div>
+                            </div>
+                            <div class="list-content2">
+                                <div class="list-date">6 دقیقه قبل</div>
                             </div>
                         </div>
-                        <div class="list-content2">
-                            <div class="list-date">6 دقیقه قبل</div>
-                        </div>
-                    </div>
-                    <div class="list-body">
-                        <div class="list-content1">
-                            لورم (0)
-                            <a href="#">
-                                <span class="fas fa-link"></span>
-                            </a>
-                            <div class="list-tag">
-                                <span class="label label-info" style="color:white; background: red">تست</span>
+                        <div class="list-body">
+                            <div class="list-content1">
+                                لورم (0)
+                                <a href="#">
+                                    <span class="fas fa-link"></span>
+                                </a>
+                                <div class="list-tag">
+                                    <span class="label label-info" style="color:white; background: red">تست</span>
+                                </div>
+                            </div>
+                            <div class="list-content2">
+                                <div class="list-date">6 دقیقه قبل</div>
                             </div>
                         </div>
-                        <div class="list-content2">
-                            <div class="list-date">6 دقیقه قبل</div>
-                        </div>
-                    </div>
-                    <div class="list-body">
-                        <div class="list-content1">
-                            لورم (0)
-                            <a href="#">
-                                <span class="fas fa-link"></span>
-                            </a>
-                            <div class="list-tag">
-                                <span class="label label-info" style="color:white; background: red">تست</span>
+                        <div class="list-body">
+                            <div class="list-content1">
+                                لورم (0)
+                                <a href="#">
+                                    <span class="fas fa-link"></span>
+                                </a>
+                                <div class="list-tag">
+                                    <span class="label label-info" style="color:white; background: red">تست</span>
+                                </div>
+                            </div>
+                            <div class="list-content2">
+                                <div class="list-date">6 دقیقه قبل</div>
                             </div>
                         </div>
-                        <div class="list-content2">
-                            <div class="list-date">6 دقیقه قبل</div>
-                        </div>
-                    </div>
-                    <div class="list-body">
-                        <div class="list-content1">
-                            لورم (0)
-                            <a href="#">
-                                <span class="fas fa-link"></span>
-                            </a>
-                            <div class="list-tag">
-                                <span class="label label-info" style="color:white; background: red">تست</span>
+                        <div class="list-body">
+                            <div class="list-content1">
+                                لورم (0)
+                                <a href="#">
+                                    <span class="fas fa-link"></span>
+                                </a>
+                                <div class="list-tag">
+                                    <span class="label label-info" style="color:white; background: red">تست</span>
+                                </div>
+                            </div>
+                            <div class="list-content2">
+                                <div class="list-date">6 دقیقه قبل</div>
                             </div>
                         </div>
-                        <div class="list-content2">
-                            <div class="list-date">6 دقیقه قبل</div>
+                        <div class="list-body">
+                            <div class="list-content1">
+                                لورم (0)
+                                <a href="#">
+                                    <span class="fas fa-link"></span>
+                                </a>
+                                <div class="list-tag">
+                                    <span class="label label-info" style="color:white; background: red">تست</span>
+                                </div>
+                            </div>
+                            <div class="list-content2">
+                                <div class="list-date">6 دقیقه قبل</div>
+                            </div>
                         </div>
-                    </div>
                     </div>
 
                     <div class="grid-box-format" id="contentGrid">
-                        <div class="grid-box content-grid" >
+                        <div class="grid-box content-grid">
                             <div class=" grid-blog">
                                 <div class="grid-blok-img">
                                     <a href="">
@@ -481,7 +482,8 @@
                         </select>
                     </div>
 
-                    <div class="pull-left small text-muted " title="To upgrade your quota, ask your administrator">۲۹ مگابایت
+                    <div class="pull-left small text-muted " title="To upgrade your quota, ask your administrator">۲۹
+                        مگابایت
                         (0.3%) استفاده شده از 10,000 مگابایت </div>
                     <div class="text-right small text-muted">
                         <span ng-if="totalDocuments" class="">53 سند پیدا شده</span>
@@ -513,7 +515,7 @@
                                     </div>
                                     <div class="setting-box upload-title">لورم</div>
                                     <div class="setting-box select-check">
-                                        <input type="checkbox" class="file-checkbox" name="" >
+                                        <input type="checkbox" class="file-checkbox" name="">
                                     </div>
                                 </div>
                             </div>
@@ -529,7 +531,7 @@
                                     </div>
                                     <div class="setting-box upload-title">لورم</div>
                                     <div class="setting-box select-check">
-                                        <input type="checkbox" class="file-checkbox" name="" >
+                                        <input type="checkbox" class="file-checkbox" name="">
                                     </div>
                                 </div>
                             </div>
@@ -745,11 +747,11 @@
 
             $fileCheckbox.change(function () {
                 if ($fileCheckbox.is(':checked')) {
-                    $addNewFile.show(); 
-                    $newFile.hide(); 
+                    $addNewFile.show();
+                    $newFile.hide();
                 } else {
-                    $addNewFile.hide(); 
-                    $newFile.show(); 
+                    $addNewFile.hide();
+                    $newFile.show();
                 }
             });
 

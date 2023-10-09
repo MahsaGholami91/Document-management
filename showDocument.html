@@ -21,57 +21,101 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery.min.map"></script>
 
-    <title>addDocument</title>
+    <title>showDocument</title>
 </head>
 
 <body>
-    <nav class="navbar default-nav">
-        <div class="left-side">
-            <ul class="left-ul nav-ul">
-                <li class="left-li">
-                    <a class="nav-logo" href="">لوگو</a>
-                </li>
-                <li class="left-li">
-                    <a href="">
-                        <span class="fas fa-book"></span>
-                        اسناد</a>
-                </li>
-                <li class="left-li">
-                    <a href="">
-                        <span class="fas fa-tags"></span>
-                        تگ ها</a>
-                </li>
-                <li class="left-li">
-                    <a href="">
-                        <span class="fas fa-user"></span>
-                        کاربران و گروه ها</a>
-                </li>
-            </ul>
-        </div>
-        <div class="right-side">
-            <ul class="right-ul nav-ul">
-                <li class="right-li">
-                    <a href="">
-                        <span class="fas fa-user"></span>
-                        ادمین</a>
-                </li>
-                <li class="right-li">
-                    <a href="">
-                        <span class="fas fa-cog"></span>
-                        تنظیمات</a>
-                </li>
-                <li class="right-li">
-                    <a href="">
-                        <span class="fas fa-power-off"></span>
-                        خروج
+    
+<!--  -->
+<nav class="show-mobile">
+    <div class="topnav">
+        <a class="" href="#">
+            <span  style="color: #2ab2dc;" >لوگو</span>
+          </a>
+        <i onclick="hamMenu()" class="fa fa-bars"></i>      
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <ul class="nav">
+        <li class="active">
+          <a href="#/document" ><span class="fas fa-book"></span> اسناد</a>
+        </li>
+        <li id="navigation-tag">
+          <a href="#/tag" class=""><span class="fas fa-tags"></span> تگ ها</a>
+        </li>
+        <li >
+          <a href="#/user" class=""><span class="fas fa-user"></span> کاربران و گروه ها</a>
+        </li>
+      </ul>
+
+      <ul class="nav">
+        <li>
+          <a href="#/settings/account" >
+            <span class="fas fa-user"></span>
+            ادمین
+          </a>
+        </li>
+        <li >
+          <a href="#/settings/account" >
+            <span class="fas fa-cog"></span> تنظیمات
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="fas fa-power-off"></span> خروج
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+<!--  -->
+        <nav class="navbar default-nav show-web">
+            <div class="left-side">
+                <ul class="left-ul nav-ul">
+                    <li class="left-li">
+                        <a class="nav-logo" href="">لوگو</a>
+                    </li>
+                    <li class="left-li">
+                        <a href="">
+                            <span class="fas fa-book"></span>
+                            اسناد</a>
+                    </li>
+                    <li class="left-li">
+                        <a href="">
+                            <span class="fas fa-tags"></span>
+                            تگ ها</a>
+                    </li>
+                    <li class="left-li">
+                        <a href="">
+                            <span class="fas fa-user"></span>
+                            کاربران و گروه ها</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="right-side">
+                <ul class="right-ul nav-ul">
+                    <li class="right-li">
+                        <a href="">
+                            <span class="fas fa-user"></span>
+                            ادمین</a>
+                    </li>
+                    <li class="right-li">
+                        <a href="">
+                            <span class="fas fa-cog"></span>
+                            تنظیمات</a>
+                    </li>
+                    <li class="right-li">
+                        <a href="">
+                            <span class="fas fa-power-off"></span>
+                            خروج
 
 
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     <div class="main-container">
         <div class="main-page ">
             <div class="sidebar ">
@@ -106,7 +150,7 @@
                                         id="mySearchDropdown" style="top: 24px; display: none; left: 0px; right: auto;">
                                         <form class="search-form" name="searchForm">
                                             <div class="form-group">
-                                                <label class="control-label sr-only " for="inputSearchSimple">جستجو
+                                                <label class="control-label mgo " for="inputSearchSimple">جستجو
                                                     ساده</label>
                                                 <div class="">
                                                     <input type="text" id="inputSearchSimple" class="form-control"
@@ -114,7 +158,7 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="control-label sr-only " for="inputSearchFulltext">جستجوی
+                                                <label class="control-label mgo " for="inputSearchFulltext">جستجوی
                                                     تمام متن</label>
                                                 <div class="">
                                                     <input type="text" id="inputSearchFulltext" class="form-control"
@@ -122,7 +166,7 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="control-label sr-only " for="inputSearchCreator">ایجاد
+                                                <label class="control-label mgo " for="inputSearchCreator">ایجاد
                                                     کننده</label>
                                                 <div class="">
                                                     <input type="text" id="inputSearchCreator" class="form-control"
@@ -131,8 +175,7 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="control-label sr-only "
-                                                    for="inputSearchLanguage">زبان</label>
+                                                <label class="control-label mgo " for="inputSearchLanguage">زبان</label>
                                                 <div class="">
                                                     <select class="form-control" id="inputSearchLanguage">
                                                         <option value="" class="" selected="selected">همه زبان ها
@@ -143,7 +186,7 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="control-label sr-only " for="inputSearchAfterDate">بعد از
+                                                <label class="control-label mgo " for="inputSearchAfterDate">بعد از
                                                     این تاریخ ایجاد شد</label>
                                                 <div class="">
                                                     <input type="text" id="inputSearchAfterDate"
@@ -152,7 +195,7 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="control-label sr-only " for="inputSearchBeforeDate">قبل از
+                                                <label class="control-label mgo " for="inputSearchBeforeDate">قبل از
                                                     این تاریخ ایجاد شد</label>
                                                 <div class="">
                                                     <input type="text" id="inputSearchBeforeDate"
@@ -161,8 +204,8 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="control-label sr-only "
-                                                    for="inputSearchAfterUpdateDate">بعد از این تاریخ به روز شد</label>
+                                                <label class="control-label mgo " for="inputSearchAfterUpdateDate">بعد
+                                                    از این تاریخ به روز شد</label>
                                                 <div class="">
                                                     <input type="text" id="inputSearchAfterUpdateDate"
                                                         class="form-control -date"
@@ -170,8 +213,8 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="control-label sr-only "
-                                                    for="inputSearchBeforeUpdateDate">قبل از این تاریخ به روز شد</label>
+                                                <label class="control-label mgo " for="inputSearchBeforeUpdateDate">قبل
+                                                    از این تاریخ به روز شد</label>
                                                 <div class="">
                                                     <input type="text" id="inputSearchBeforeUpdateDate"
                                                         class="form-control-date"
@@ -179,7 +222,7 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="control-label sr-only " for="inputSearchTags">تک
+                                                <label class="control-label mgo " for="inputSearchTags">تک
                                                     ها</label>
                                                 <div class="">
                                                     <div tags="advsearch.tags" ref="inputSearchTags" class="">
@@ -1091,7 +1134,7 @@
                     </div>
                     <form class="">
                         <div class="form-group">
-                            <label class="sr-only" for="commentInput">نظر اضافه کنید</label>
+                            <label class="mgo" for="commentInput">نظر اضافه کنید</label>
                             <input type="text" class="form-control" id="" placeholder="نظر اضافه کنید">
                         </div>
                     </form>
@@ -1268,6 +1311,16 @@
                 $("#contentFolder").toggle();
             });
         });
+
+      // hamburger menu
+      function hamMenu() {
+        var menu = document.getElementById("mobileMenu");
+        if (menu.style.display === "block") {
+            menu.style.display = "none";
+        } else {
+            menu.style.display = "block";
+        }
+    }
 
 
     </script>
