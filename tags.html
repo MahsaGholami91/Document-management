@@ -18,6 +18,51 @@
 </head>
 
 <body>
+            
+<!--  -->
+<nav class="show-mobile">
+    <div class="topnav">
+        <a class="" href="#">
+            <span  style="color: #2ab2dc;" >لوگو</span>
+          </a>
+        <i onclick="hamMenu()" class="fa fa-bars"></i>      
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <ul class="nav-bar">
+        <li class="active">
+          <a href="#/document" ><span class="fas fa-book"></span> اسناد</a>
+        </li>
+        <li>
+          <a href="#/tag" class=""><span class="fas fa-tags"></span> تگ ها</a>
+        </li>
+        <li >
+          <a href="#/user" class=""><span class="fas fa-user"></span> کاربران و گروه ها</a>
+        </li>
+      </ul>
+
+      <ul class="nav-bar">
+        <li>
+          <a href="#/settings/account" >
+            <span class="fas fa-user"></span>
+            ادمین
+          </a>
+        </li>
+        <li >
+          <a href="#/settings/account" >
+            <span class="fas fa-cog"></span> تنظیمات
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="fas fa-power-off"></span> خروج
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+<!--  -->
     <nav class="navbar default-nav" >
         <div class="left-side">
             <ul class="left-ul nav-ul">
@@ -401,12 +446,25 @@
                 <a href="">ایپسوم</a>
                 <span>ورژن۲.۲</span>
             </p>
-            <select id="language-select" onchange="changeLanguage()">
+            <select id="language-select">
                 <option value="fa">فارسی</option>
                 <option value="en">English</option>
             </select>
         </div>  
     </div>
     
+
+    <script>
+
+      // hamburger menu
+      function hamMenu() {
+        var menu = document.getElementById("mobileMenu");
+        if (menu.style.display === "block") {
+            menu.style.display = "none";
+        } else {
+            menu.style.display = "block";
+        }
+    }
+    </script>
 </body>
 </html>

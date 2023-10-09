@@ -2437,32 +2437,51 @@ label {
     justify-content: space-between;
     padding: 15px;
 }
-
+.topnav span{
+    font-weight: 900;
+    font-size: 18px;
+}
 .topnav i {
     color: #ddd;
+    font-weight: 900;
+    font-size: 18px;
 }
 
 .mobile-menu {
     text-align: right;
     display: none;
+    margin-bottom: 20px;
+}
+.show-mobile {
+    display: none;
 }
 
-.nav {
+.nav-bar {
     padding-right: 15px;
     display: flex;
     flex-direction: column;
     line-height: 40px;
     margin-bottom: 10px;
+    list-style: none;
 }
 
-.nav li>a {
+.nav-bar li>a {
     color: #777;
 }
 
-.nav >li.active>a {
+.nav-bar >li.active>a {
     color: #2ab2dc;
     background: 0;
 }
+
+/* jalali */
+
+.pwt-btn-calendar {
+    display: none !important;
+  }
+
+
+
 
 @media (max-width: 991px) {
     .login-form {
@@ -2472,6 +2491,7 @@ label {
     .tags-head .side {
         width: 100%;
     }
+    
 }
 
 @media (max-width: 768px) {
