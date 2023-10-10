@@ -2472,7 +2472,10 @@ label {
 .pwt-btn-calendar {
     display: none !important;
   }
-
+  .ck.ck-editor {
+    position: relative;
+    flex: 10.1;
+}
 
 
 
