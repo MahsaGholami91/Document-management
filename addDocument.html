@@ -10,15 +10,8 @@
     <script src="js/jquery2.min.js"></script>
     <script src="js/persian-date.min.js"></script>
     <script src="js/persian-datepicker.min.js"></script>
-
     <script src="https://cdn.ckeditor.com/ckeditor5/40.0.0/classic/ckeditor.js"></script>
-
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script> -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-
     <link rel="stylesheet" href="css/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap/js/bootstrap.js">
@@ -26,7 +19,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <!-- <script src="js/jquery.js"></script> -->
     <!-- <script src="js/jquery.min.js"></script> -->
     <script src="js/jquery.min.map"></script>
@@ -161,102 +154,52 @@
                                     <div class="search-dropdown-menu dropdown-menu search-dropdown-content"
                                         id="mySearchDropdown" style="top: 24px; display: none; left: 0px; right: auto;">
                                         <form class="search-form" name="searchForm">
-                                            <div class="form-group">
-                                                <label class="control-label mgo " for="inputSearchSimple">جستجو
-                                                    ساده</label>
-                                                <div class="">
-                                                    <input type="text" id="inputSearchSimple" class="form-control"
-                                                        placeholder="جستجو ساده">
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="control-label mgo " for="inputSearchFulltext">جستجوی
-                                                    تمام متن</label>
-                                                <div class="">
-                                                    <input type="text" id="inputSearchFulltext" class="form-control"
-                                                        placeholder="جستجوی تمام متن">
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="control-label mgo " for="inputSearchCreator">ایجاد
-                                                    کننده</label>
-                                                <div class="">
-                                                    <input type="text" id="inputSearchCreator" class="form-control"
-                                                        placeholder="ایجاد کننده">
-                                                    <ul class="dropdown-menu"></ul>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="control-label mgo " for="inputSearchLanguage">زبان</label>
-                                                <div class="">
-                                                    <select class="form-control" id="inputSearchLanguage">
-                                                        <option value="" class="" selected="selected">همه زبان ها
-                                                        </option>
-                                                        <option value="eng" class=" ">English</option>
-                                                        <option value="fra" class=" ">Français</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="control-label mgo " for="inputSearchAfterDate">بعد از
-                                                    این تاریخ ایجاد شد</label>
-                                                <div class="">
-                                                    <input type="text" id="inputSearchAfterDate"
-                                                        class="form-control -date"
-                                                        placeholder="بعد از این تاریخ ایجاد شد">
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="control-label mgo " for="inputSearchBeforeDate">قبل از
-                                                    این تاریخ ایجاد شد</label>
-                                                <div class="">
-                                                    <input type="text" id="inputSearchBeforeDate"
-                                                        class="form-control -date"
-                                                        placeholder="قبل از این تاریخ ایجاد شد">
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="control-label mgo " for="inputSearchAfterUpdateDate">بعد
-                                                    از این تاریخ به روز شد</label>
-                                                <div class="">
-                                                    <input type="text" id="inputSearchAfterUpdateDate"
-                                                        class="form-control -date"
-                                                        placeholder="بعد از این تاریخ به روز شد">
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="control-label mgo " for="inputSearchBeforeUpdateDate">قبل
-                                                    از این تاریخ به روز شد</label>
-                                                <div class="">
-                                                    <input type="text" id="inputSearchBeforeUpdateDate"
-                                                        class="form-control-date"
-                                                        placeholder="قبل از این تاریخ به روز شد">
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="control-label mgo " for="inputSearchTags">تک
-                                                    ها</label>
-                                                <div class="">
-                                                    <div tags="advsearch.tags" ref="inputSearchTags" class="">
-                                                        <ul class="list-inline"></ul>
-                                                        <input class="form-control" type="text" id="inputSearchTags"
-                                                            placeholder="تگ را وارد کنید">
-                                                        <ul class="dropdown-menu"></ul>
-                                                    </div>
-                                                </div>
+
+                                            <input type="text" id="inputSearchSimple" class="form-control"
+                                                placeholder="جستجو ساده">
+
+                                            <input type="text" id="inputSearchFulltext" class="form-control"
+                                                placeholder="جستجوی تمام متن">
+
+                                            <input type="text" id="inputSearchCreator" class="form-control"
+                                                placeholder="ایجاد کننده">
+
+                                            <select class="form-control" id="inputSearchLanguage">
+                                                <option value="" class="" selected="selected">همه زبان ها
+                                                </option>
+                                                <option value="eng" class=" ">English</option>
+                                                <option value="fra" class=" ">Français</option>
+                                            </select>
+
+                                            <input type="text" id="inputSearchAfterDate" class="form-control -date"
+                                                placeholder="بعد از این تاریخ ایجاد شد">
+
+                                            <input type="text" id="inputSearchBeforeDate" class="form-control -date"
+                                                placeholder="قبل از این تاریخ ایجاد شد">
+
+                                            <input type="text" id="inputSearchAfterUpdateDate"
+                                                class="form-control -date" placeholder="بعد از این تاریخ به روز شد">
+
+                                            <input type="text" id="inputSearchBeforeUpdateDate"
+                                                class="form-control -date" placeholder="قبل از این تاریخ به روز شد">
+
+                                            <input class="form-control" type="text" id="inputSearchTags"
+                                                placeholder="تگ را وارد کنید">
+
+                                            <div class="checkbox">
+
+                                                <input type="checkbox" class="">
+                                                <label class="">فقط اسناد مشترک </label>
+
+
                                             </div>
                                             <div class="checkbox">
-                                                <label class="">
-                                                    <input type="checkbox" class="">فقط اسناد مشترک
-                                                </label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label class="">
-                                                    <input type="checkbox" class=""> گردش کار به من اختصاص داده شده است
-                                                </label>
+                                                <input type="checkbox" class="">
+                                                <label class="">گردش کار به من اختصاص داده شده است </label>
                                             </div>
                                             <div class="form-group text-center">
-                                                <button type="submit" class="btn btn-primary ">
+                                                <button type="submit" class="btn btn-primary "
+                                                    onclick="performSearch()">
                                                     <span class="fas fa-search"></span> جستجو
                                                 </button>
                                                 <button class="btn ">پاک کردن</button>
@@ -331,7 +274,7 @@
                                     </div>
                                 </div>
 
-                                
+
                             </div>
                         </div>
                     </div>
@@ -470,7 +413,7 @@
                         </a>
                     </div>
                     <div class="grid-blok-text">
-                        <span>lorem (0)</span>
+                        <span>لورم (0)</span>
                     </div>
                 </div>
                 <div class="grid-blog">
@@ -480,7 +423,7 @@
                         </a>
                     </div>
                     <div class="grid-blok-text">
-                        <span>lorem (0)</span>
+                        <span>لورم (0)</span>
                     </div>
                 </div>
                 <div class="grid-blog">
@@ -490,7 +433,7 @@
                         </a>
                     </div>
                     <div class="grid-blok-text">
-                        <span>lorem (0)</span>
+                        <span>لورم (0)</span>
                     </div>
                 </div>
                 <div class="grid-blog">
@@ -500,7 +443,7 @@
                         </a>
                     </div>
                     <div class="grid-blok-text">
-                        <span>lorem (0)</span>
+                        <span>لورم (0)</span>
                     </div>
                 </div>
                 <div class="grid-blog">
@@ -510,7 +453,7 @@
                         </a>
                     </div>
                     <div class="grid-blok-text">
-                        <span>lorem (0)</span>
+                        <span>لورم (0)</span>
                     </div>
                 </div>
                 <div class="grid-blog">
@@ -520,7 +463,7 @@
                         </a>
                     </div>
                     <div class="grid-blok-text">
-                        <span>lorem (0)</span>
+                        <span>لورم (0)</span>
                     </div>
                 </div>
                 <div class="grid-blog">
@@ -530,7 +473,7 @@
                         </a>
                     </div>
                     <div class="grid-blok-text">
-                        <span>lorem (0)</span>
+                        <span>لورم (0)</span>
                     </div>
                 </div>
                 <div class="grid-blog">
@@ -540,7 +483,7 @@
                         </a>
                     </div>
                     <div class="grid-blok-text">
-                        <span>lorem (0)</span>
+                        <span>لورم (0)</span>
                     </div>
                 </div>
                 <div class="grid-blog">
@@ -550,7 +493,7 @@
                         </a>
                     </div>
                     <div class="grid-blok-text">
-                        <span>lorem (0)</span>
+                        <span>لورم (0)</span>
                     </div>
                 </div>
             </div>
@@ -744,226 +687,7 @@
     </div>
     </div>
 
-
-
-
-
-
-    <script>
-        function toggleDropdown() {
-            var dropdown = document.getElementById("myDropdown");
-            if (dropdown.style.display === "block") {
-                dropdown.style.display = "none";
-            } else {
-                dropdown.style.display = "block";
-            }
-        }
-
-        window.onclick = function (event) {
-            if (!event.target.matches('.dropbtn')) {
-                var dropdowns = document.getElementsByClassName("dropdown-content");
-                for (var i = 0; i < dropdowns.length; i++) {
-                    var openDropdown = dropdowns[i];
-                    if (openDropdown.style.display === "block") {
-                        openDropdown.style.display = "none";
-                    }
-                }
-            }
-        }
-
-
-        function toggleSearch() {
-            var dropdown = document.getElementById("mySearchDropdown");
-            if (dropdown.style.display === "block") {
-                dropdown.style.display = "none";
-            } else {
-                dropdown.style.display = "block";
-            }
-        }
-
-        window.onclick = function (event) {
-            if (!event.target.matches('.search-btn')) {
-                var dropdowns = document.getElementsByClassName("search-dropdown-content");
-                for (var i = 0; i < dropdowns.length; i++) {
-                    var openDropdown = dropdowns[i];
-                    if (openDropdown.style.display === "block") {
-                        openDropdown.style.display = "none";
-                    }
-                }
-            }
-        }
-
-
-    </script>
-    <script>
-        $(document).ready(function () {
-            $("#listTab").click(function () {
-                $("#contentList").show();
-                $("#contentGrid").hide();
-                $("#listTab").addClass("active-tab");
-                $("#gridTab").removeClass("active-tab");
-            });
-
-            $("#gridTab").click(function () {
-                $("#contentGrid").show();
-                $("#contentList").hide();
-                $("#listTab").removeClass("active-tab");
-                $("#gridTab").addClass("active-tab");
-            });
-
-
-            const $toggleButton = $('#extraToggle');
-            const $items = $('#extraDiv');
-
-            $items.hide();
-
-            $toggleButton.click(function () {
-                $items.toggle();
-            });
-
-
-            $(document).ready(function () {
-                $(".persian-date").pDatepicker({
-                    initialValueType: "gregorian",
-                    format: "YYYY/MM/DD",
-                    onSelect: "year"
-                });
-
-                const $openCalender = $('#openCalender');
-                const $datePicker = $('.datepicker-container');
-
-                $datePicker.hide();
-
-                $openCalender.click(function () {
-                    $datePicker.toggle();
-                });
-
-
-
-
-            });
-
-            const $fileCheckbox = $('.file-checkbox');
-            const $addNewFile = $('#add-newFile');
-            const $newFile = $('#newFile');
-
-
-            $fileCheckbox.change(function () {
-                if ($fileCheckbox.is(':checked')) {
-                    $addNewFile.show();
-                    $newFile.hide();
-                } else {
-                    $addNewFile.hide();
-                    $newFile.show();
-                }
-            });
-
-
-
-        });
-
-        $(document).ready(function () {
-            const $toggleButton = $('#toggleSelection');
-            const $fileCheckboxes = $('.file-checkbox');
-
-            let selectAllState = true;
-
-            function toggleButtonTextAndIcon() {
-                if (selectAllState) {
-                    $toggleButton.html('<span class="far fa-check-square"></span> هیچکدام');
-                    $fileCheckboxes.prop('checked', true);
-                } else {
-                    $toggleButton.html('<span class="far fa-square"></span> انتخاب همه');
-                    $fileCheckboxes.prop('checked', false);
-                }
-                selectAllState = !selectAllState;
-            }
-
-            $toggleButton.click(toggleButtonTextAndIcon);
-
-            $(document).keydown(function (e) {
-                if (e.ctrlKey) {
-                    if (e.key === 'a' || e.key === 'A') {
-                        $toggleButton.click();
-                        e.preventDefault();
-                    } else if (e.key === 'd' || e.key === 'D') {
-                        $toggleButton.click();
-                        e.preventDefault();
-                    }
-                }
-            });
-
-        });
-        $(document).ready(function () {
-            $("#folderTab").click(function () {
-                $("#contentFolder").toggle();
-            });
-        });
-
-        // hamburger menu
-        function hamMenu() {
-            var menu = document.getElementById("mobileMenu");
-            if (menu.style.display === "block") {
-                menu.style.display = "none";
-            } else {
-                menu.style.display = "block";
-            }
-        }
-
-    </script>
-<script>
-    $('#openModalButton').on('shown.bs.modal', function () {
-        $('#exampleModal').trigger('focus')
-    })
-
-</script>
-    <!-- <script>
-        const content = $('.pagination-box ul');
-        const prevBtn = $('#prevBtn');
-        const nextBtn = $('#nextBtn');
-        
-        let currentPage = 1;
-        const itemsPerPage = 3; 
-        
-        function displayItems() {
-            const items = content.children();
-            const start = (currentPage - 1) * itemsPerPage;
-            const end = start + itemsPerPage;
-            
-            items.hide();
-            items.slice(start, end).show();
-        }
-        
-        prevBtn.click(function() {
-            if (currentPage > 1) {
-                currentPage--;
-                displayItems();
-                nextBtn.prop('disabled', false);
-            }
-            
-            if (currentPage === 1) {
-                prevBtn.prop('disabled', true);
-            }
-        });
-        
-        nextBtn.click(function() {
-            const items = content.children();
-            const totalItems = items.length;
-            const totalPages = Math.ceil(totalItems / itemsPerPage);
-            
-            if (currentPage < totalPages) {
-                currentPage++;
-                displayItems();
-                prevBtn.prop('disabled', false);
-            }
-            
-            if (currentPage === totalPages) {
-                nextBtn.prop('disabled', true);
-            }
-        });
-        
-        displayItems();
-    </script> -->
+    <script src="js/main.js"></script>
 
 </body>
 
