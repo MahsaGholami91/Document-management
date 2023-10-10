@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap/js/bootstrap.js">
     <link rel="stylesheet" href="css/bootstrap/js/bootstrap.min.js">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -275,12 +277,49 @@
                                 <button class="btn btn-default btn-folder" id="folderTab">
                                     <span class="far fa-folder-open"></span>
                                 </button>
-                                <button class="btn btn-primary btn-add-tag">
+                                
+                                <button id="openModalButton" type="button" data-toggle="modal"
+                                    data-target="#exampleModal" class="btn btn-primary btn-add-tag">
                                     <span>
                                         <i class="fas fa-tag"></i>
                                         <i class="fas fa-plus plus-icon"></i>
                                     </span>
                                 </button>
+
+                                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">تگ جدید</h5>
+
+                                            </div>
+                                            <div class="modal-body">
+                                                <form class="form-inline text-center" name="tagForm">
+                                                    <div class="flex-add-tag">
+                                                        <div class="input-group flex-color-hex">
+                                                            <input type="text" name="color"
+                                                                class="form-control hex-code jscolor" value="3a87ad"
+                                                                style="background-image: linear-gradient(to left, rgb(58, 135, 173) 0%, rgb(58, 135, 173) 30px, rgba(0, 0, 0, 0) 31px, rgba(0, 0, 0, 0) 100%), url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAQCAYAAAB3AH1ZAAAAAXNSR0IArs4c6QAAAFNJREFUSEtjnDlz5n8GPODs2bP4pBmMjY3xyuPSn5KSwrB169bljKMOGA2B0RAY8BBIS0vDWw6Qm89hhQMu/U5OTgxLlixZzjjqgNEQGA2BgQ4BADx2qkG0ILJiAAAAAElFTkSuQmCC&quot;) !important; background-position: right top, right top !important; background-size: auto, 30px 16px !important; background-repeat: repeat-y, repeat-y !important; background-origin: padding-box, padding-box !important; padding-right: 40px !important;">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <input type="text" name="name" class="form-control"
+                                                                placeholder="تگ جدید">
+                                                        </div>
+
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-primary">ذخیره</button>
+                                                <button type="button" class="btn btn-secondary"
+                                                    data-dismiss="modal">انصراف</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                               
                             </div>
                         </div>
                     </div>
@@ -850,7 +889,12 @@
             }
         }
     </script>
+ <script>
+    $('#openModalButton').on('shown.bs.modal', function () {
+        $('#exampleModal').trigger('focus')
+    })
 
+</script>
     <!-- <script>
         const content = $('.pagination-box ul');
         const prevBtn = $('#prevBtn');
